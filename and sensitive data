@@ -1,0 +1,27 @@
+Binary file [35massets/images/home-images/branding.png[m matches
+Binary file [35massets/images/portfolios/web-application-development/inner/11.png[m matches
+Binary file [35massets/images/services/domain-hosting/desiging-and-building-user.png[m matches
+Binary file [35massets/images/services/frontend-&-u-design/design-buildnig.png[m matches
+Binary file [35massets/images/work/diageo/thumb.jpg[m matches
+[35mblog/wp-admin/includes/class-core-upgrader.php[m[36m:[m				 * mkdir_failed__copy_dir, copy_failed__copy_dir_retry, and di[1;31msk_[mfull.
+[35mblog/wp-admin/includes/class-core-upgrader.php[m[36m:[m				} elseif ( 'di[1;31msk_[mfull' === $error_code ) {
+[35mblog/wp-admin/includes/class-pclzip.php[m[36m:[m    $v_data = unpack('vdisk/vdi[1;31msk_[mstart/vdi[1;31msk_[mentries/ventries/Vsize/Voffset/vcomment_size', $v_binary_data);
+[35mblog/wp-admin/includes/class-pclzip.php[m[36m:[m    $p_central_dir['di[1;31msk_[mentries'] = $v_data['di[1;31msk_[mentries'];
+[35mblog/wp-admin/includes/class-pclzip.php[m[36m:[m    $p_central_dir['di[1;31msk_[mstart'] = $v_data['di[1;31msk_[mstart'];
+[35mblog/wp-admin/includes/class-pclzip.php[m[36m:[m  //   $p_remove_di[1;31msk_[mletter : true | false
+[35mblog/wp-admin/includes/class-pclzip.php[m[36m:[m  function PclZipUtilTranslateWinPath($p_path, $p_remove_di[1;31msk_[mletter=true)
+[35mblog/wp-admin/includes/class-pclzip.php[m[36m:[m      if (($p_remove_di[1;31msk_[mletter) && (($v_position = strpos($p_path, ':')) != false)) {
+[35mblog/wp-admin/includes/class-wp-automatic-updater.php[m[36m:[m		if ( 'di[1;31msk_[mfull' === $error_code || str_contains( $error_code, '__copy_dir' ) ) {
+[35mblog/wp-admin/includes/class-wp-site-health.php[m[36m:[m	public function get_test_available_updates_di[1;31msk_[mspace() {
+[35mblog/wp-admin/includes/class-wp-site-health.php[m[36m:[m		$available_space = function_exists( 'di[1;31msk_[mfree_space' ) ? @di[1;31msk_[mfree_space( WP_CONTENT_DIR . '/upgrade/' ) : false;
+[35mblog/wp-admin/includes/class-wp-site-health.php[m[36m:[m			'test'        => 'available_updates_di[1;31msk_[mspace',
+[35mblog/wp-admin/includes/class-wp-site-health.php[m[36m:[m				'available_updates_di[1;31msk_[mspace' => array(
+[35mblog/wp-admin/includes/class-wp-site-health.php[m[36m:[m					'test'  => 'available_updates_di[1;31msk_[mspace',
+[35mblog/wp-admin/includes/file.php[m[36m:[m	 * di[1;31msk_[mfree_space() could return false. Assume that any falsey value is an error.
+[35mblog/wp-admin/includes/file.php[m[36m:[m		$available_space = function_exists( 'di[1;31msk_[mfree_space' ) ? @di[1;31msk_[mfree_space( WP_CONTENT_DIR ) : false;
+[35mblog/wp-admin/includes/file.php[m[36m:[m				'di[1;31msk_[mfull_unzip_file',
+[35mblog/wp-admin/includes/file.php[m[36m:[m	 * di[1;31msk_[mfree_space() could return false. Assume that any falsey value is an error.
+[35mblog/wp-admin/includes/file.php[m[36m:[m		$available_space = function_exists( 'di[1;31msk_[mfree_space' ) ? @di[1;31msk_[mfree_space( WP_CONTENT_DIR ) : false;
+[35mblog/wp-admin/includes/file.php[m[36m:[m				'di[1;31msk_[mfull_unzip_file',
+[35mblog/wp-admin/includes/update-core.php[m[36m:[m		$available_space = function_exists( 'di[1;31msk_[mfree_space' ) ? @di[1;31msk_[mfree_space( ABSPATH ) : false;
+[35mblog/wp-admin/includes/update-core.php[m[36m:[m			$result = new WP_Error( 'di[1;31msk_[mfull', __( 'There is not enough free disk space to complete the update.' ) );
