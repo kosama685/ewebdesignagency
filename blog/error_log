@@ -1,0 +1,214 @@
+[03-Oct-2023 11:59:39 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT COUNT(t1.query) AS total,
+				CASE
+					WHEN t1.position BETWEEN 1 AND 3 THEN 'top3'
+					WHEN t1.position BETWEEN 4 AND 10 THEN 'top10'
+					WHEN t1.position BETWEEN 11 AND 50 THEN 'top50'
+					WHEN t1.position BETWEEN 51 AND 100 THEN 'top100'
+					ELSE 'none'
+				END AS position_type
+			FROM (SELECT query, ROUND( AVG(position), 0 ) AS position 
+				FROM wp_rank_math_analytics_gsc
+				WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59' AND DATE(created) = (SELECT MAX(DATE(created)) FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59')
+				GROUP BY query 
+				ORDER BY position) as t1
+			GROUP BY position_type made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, RankMath\Analytics\Keywords->get_top_keywords
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT COUNT(t1.query) AS total,
+				CASE
+					WHEN t1.position BETWEEN 1 AND 3 THEN 'top3'
+					WHEN t1.position BETWEEN 4 AND 10 THEN 'top10'
+					WHEN t1.position BETWEEN 11 AND 50 THEN 'top50'
+					WHEN t1.position BETWEEN 51 AND 100 THEN 'top100'
+					ELSE 'none'
+				END AS position_type
+			FROM (SELECT query, ROUND( AVG(position), 0 ) AS position 
+				FROM wp_rank_math_analytics_gsc
+				WHERE created BETWEEN '2023-08-10 00:00:00' AND '2023-09-12 23:59:59' AND DATE(created) = (SELECT MAX(DATE(created)) FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-08-10 00:00:00' AND '2023-09-12 23:59:59')
+				GROUP BY query 
+				ORDER BY position) as t1
+			GROUP BY position_type made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, RankMath\Analytics\Keywords->get_top_keywords
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT AVG(ctr) AS ctr FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59' LIMIT 0, 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, RankMath\Analytics\Keywords->get_top_keywords, MyThemeShop\Database\Query_Builder->getVar, MyThemeShop\Database\Query_Builder->one
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT AVG(ctr) AS ctr FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-08-10 00:00:00' AND '2023-09-12 23:59:59' LIMIT 0, 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, RankMath\Analytics\Keywords->get_top_keywords, MyThemeShop\Database\Query_Builder->getVar, MyThemeShop\Database\Query_Builder->one
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT MAX(DATE(created)) as date, CASE WHEN created BETWEEN '2023-09-16 00:00:00' AND '2023-09-21 23:59:59' THEN 'range1' WHEN created BETWEEN '2023-09-22 00:00:00' AND '2023-09-27 23:59:59' THEN 'range2' WHEN created BETWEEN '2023-09-28 00:00:00' AND '2023-10-03 23:59:59' THEN 'range3' WHEN created BETWEEN '2023-10-04 00:00:00' AND '2023-10-09 23:59:59' THEN 'range4' WHEN created BETWEEN '2023-10-10 00:00:00' AND '2023-10-16 23:59:59' THEN 'range5' ELSE 'none' END AS 'range_group'
+			FROM wp_rank_math_analytics_gsc
+			WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59'
+			GROUP BY range_group made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, RankMath\Analytics\Keywords->get_top_position_graph
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT query
+			FROM wp_rank_math_analytics_gsc
+			WHERE DATE(created) = (SELECT MAX(DATE(created)) FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59')
+			GROUP BY query made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, apply_filters('rank_math/analytics/keywords_overview'), WP_Hook->apply_filters, RankMathPro\Analytics\Keywords->add_winning_losing_data, RankMathPro\Analytics\Keywords->get_winning_keywords, RankMathPro\Analytics\Keywords->get_recent_keywords
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT t1.id as id
+				FROM wp_rank_math_analytics_gsc t1
+				INNER JOIN (
+					SELECT query, MAX(created) as latest_created
+					FROM wp_rank_math_analytics_gsc
+					WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59'  GROUP BY query
+				) t2 ON t1.query = t2.query AND t1.created = t2.latest_created made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, apply_filters('rank_math/analytics/keywords_overview'), WP_Hook->apply_filters, RankMathPro\Analytics\Keywords->add_winning_losing_data, RankMathPro\Analytics\Keywords->get_winning_keywords, RankMath\Analytics\Stats->get_analytics_data, RankMath\Analytics\Stats->get_position_data_by_dimension
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT t1.id as id
+				FROM wp_rank_math_analytics_gsc t1
+				INNER JOIN (
+					SELECT query, MAX(created) as latest_created
+					FROM wp_rank_math_analytics_gsc
+					WHERE created BETWEEN '2023-08-10 00:00:00' AND '2023-09-12 23:59:59'  GROUP BY query
+				) t2 ON t1.query = t2.query AND t1.created = t2.latest_created made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, apply_filters('rank_math/analytics/keywords_overview'), WP_Hook->apply_filters, RankMathPro\Analytics\Keywords->add_winning_losing_data, RankMathPro\Analytics\Keywords->get_winning_keywords, RankMath\Analytics\Stats->get_analytics_data, RankMath\Analytics\Stats->get_position_data_by_dimension
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT
+					t1.query as query, ROUND( t1.position, 0 ) as position,
+					COALESCE( ROUND( t1.position - COALESCE( t2.position, 100 ), 0 ), 0 ) as diffPosition
+				FROM
+					( SELECT a.query, a.position FROM wp_rank_math_analytics_gsc AS a WHERE 1 = 1 AND id IN ('')) AS t1
+				LEFT JOIN
+					( SELECT a.query, a.position FROM wp_rank_math_analytics_gsc AS a WHERE 1 = 1 AND id IN ('')) AS t2
+				ON t1.query = t2.query
+				WHERE COALESCE( ROUND( t1.position - COALESCE( t2.position, 100 ), 0 ), 0 ) < 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, apply_filters('rank_math/analytics/keywords_overview'), WP_Hook->apply_filters, RankMathPro\Analytics\Keywords->add_winning_losing_data, RankMathPro\Analytics\Keywords->get_winning_keywords, RankMath\Analytics\Stats->get_analytics_data, RankMath\Analytics\Stats->get_position_data_by_dimension
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT
+				t1.query as query, t1.clicks, t1.impressions, t1.ctr,
+				COALESCE( t1.clicks - t2.clicks, 0 ) as diffClicks,
+				COALESCE( t1.impressions - t2.impressions, 0 ) as diffImpressions,
+				COALESCE( t1.ctr - t2.ctr, 0 ) as diffCtr
+			FROM
+				( SELECT query, SUM( clicks ) as clicks, SUM(impressions) as impressions, AVG(ctr) as ctr
+					FROM wp_rank_math_analytics_gsc
+					WHERE 1 = 1 AND created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59'  AND query IN ('')
+					GROUP BY query) as t1
+			LEFT JOIN
+				( SELECT query, SUM( clicks ) as clicks, SUM(impressions) as impressions, AVG(ctr) as ctr
+					FROM wp_rank_math_analytics_gsc
+					WHERE 1 = 1 AND created BETWEEN '2023-08-10 00:00:00' AND '2023-09-12 23:59:59'  AND query IN ('')
+					GROUP BY query) as t2
+			ON t1.query = t2.query made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, apply_filters('rank_math/analytics/keywords_overview'), WP_Hook->apply_filters, RankMathPro\Analytics\Keywords->add_winning_losing_data, RankMathPro\Analytics\Keywords->get_winning_keywords, RankMath\Analytics\Stats->get_analytics_data, RankMath\Analytics\Stats->get_metrics_data_by_dimension
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT a.query, a.position, t.date, t.range_group
+			FROM wp_rank_math_analytics_gsc AS a
+			INNER JOIN
+				(SELECT query, DATE_FORMAT(created, '%Y-%m-%d') as date, MAX(id) as id, CASE WHEN created BETWEEN '2023-09-16 00:00:00' AND '2023-09-21 23:59:59' THEN 'range1' WHEN created BETWEEN '2023-09-22 00:00:00' AND '2023-09-27 23:59:59' THEN 'range2' WHEN created BETWEEN '2023-09-28 00:00:00' AND '2023-10-03 23:59:59' THEN 'range3' WHEN created BETWEEN '2023-10-04 00:00:00' AND '2023-10-09 23:59:59' THEN 'range4' WHEN created BETWEEN '2023-10-10 00:00:00' AND '2023-10-16 23:59:59' THEN 'range5' ELSE 'none' END AS 'range_group'
+				FROM wp_rank_math_analytics_gsc
+				WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59'
+					AND query IN ('')
+				GROUP BY query, range_group
+				ORDER BY created ASC) AS t ON a.id = t.id
+			 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, apply_filters('rank_math/analytics/keywords_overview'), WP_Hook->apply_filters, RankMathPro\Analytics\Keywords->add_winning_losing_data, RankMathPro\Analytics\Keywords->get_winning_keywords, RankMathPro\Analytics\Keywords->get_graph_data_for_keywords
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT query
+			FROM wp_rank_math_analytics_gsc
+			WHERE DATE(created) = (SELECT MAX(DATE(created)) FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59')
+			GROUP BY query made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, apply_filters('rank_math/analytics/keywords_overview'), WP_Hook->apply_filters, RankMathPro\Analytics\Keywords->add_winning_losing_data, RankMathPro\Analytics\Keywords->get_losing_keywords, RankMathPro\Analytics\Keywords->get_recent_keywords
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT t1.id as id
+				FROM wp_rank_math_analytics_gsc t1
+				INNER JOIN (
+					SELECT query, MAX(created) as latest_created
+					FROM wp_rank_math_analytics_gsc
+					WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59'  GROUP BY query
+				) t2 ON t1.query = t2.query AND t1.created = t2.latest_created made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, apply_filters('rank_math/analytics/keywords_overview'), WP_Hook->apply_filters, RankMathPro\Analytics\Keywords->add_winning_losing_data, RankMathPro\Analytics\Keywords->get_losing_keywords, RankMath\Analytics\Stats->get_analytics_data, RankMath\Analytics\Stats->get_position_data_by_dimension
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT t1.id as id
+				FROM wp_rank_math_analytics_gsc t1
+				INNER JOIN (
+					SELECT query, MAX(created) as latest_created
+					FROM wp_rank_math_analytics_gsc
+					WHERE created BETWEEN '2023-08-10 00:00:00' AND '2023-09-12 23:59:59'  GROUP BY query
+				) t2 ON t1.query = t2.query AND t1.created = t2.latest_created made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, apply_filters('rank_math/analytics/keywords_overview'), WP_Hook->apply_filters, RankMathPro\Analytics\Keywords->add_winning_losing_data, RankMathPro\Analytics\Keywords->get_losing_keywords, RankMath\Analytics\Stats->get_analytics_data, RankMath\Analytics\Stats->get_position_data_by_dimension
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT
+					t1.query as query, ROUND( t1.position, 0 ) as position,
+					COALESCE( ROUND( t1.position - COALESCE( t2.position, 100 ), 0 ), 0 ) as diffPosition
+				FROM
+					( SELECT a.query, a.position FROM wp_rank_math_analytics_gsc AS a WHERE 1 = 1 AND id IN ('')) AS t1
+				LEFT JOIN
+					( SELECT a.query, a.position FROM wp_rank_math_analytics_gsc AS a WHERE 1 = 1 AND id IN ('')) AS t2
+				ON t1.query = t2.query
+				WHERE COALESCE( ROUND( t1.position - COALESCE( t2.position, 100 ), 0 ), 0 ) > 0 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, apply_filters('rank_math/analytics/keywords_overview'), WP_Hook->apply_filters, RankMathPro\Analytics\Keywords->add_winning_losing_data, RankMathPro\Analytics\Keywords->get_losing_keywords, RankMath\Analytics\Stats->get_analytics_data, RankMath\Analytics\Stats->get_position_data_by_dimension
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT COUNT(DISTINCT(page)) AS posts, SUM(impressions) AS impressions, SUM(clicks) AS clicks, AVG(position) AS position, AVG(ctr) AS ctr FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59' LIMIT 0, 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, MyThemeShop\Database\Query_Builder->one
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT COUNT(DISTINCT(page)) AS posts, SUM(impressions) AS impressions, SUM(clicks) AS clicks, AVG(position) AS position, AVG(ctr) AS ctr FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-08-10 00:00:00' AND '2023-09-12 23:59:59' LIMIT 0, 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, MyThemeShop\Database\Query_Builder->one
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT
+				t1.query as query, t1.clicks, t1.impressions, t1.ctr,
+				COALESCE( t1.clicks - t2.clicks, 0 ) as diffClicks,
+				COALESCE( t1.impressions - t2.impressions, 0 ) as diffImpressions,
+				COALESCE( t1.ctr - t2.ctr, 0 ) as diffCtr
+			FROM
+				( SELECT query, SUM( clicks ) as clicks, SUM(impressions) as impressions, AVG(ctr) as ctr
+					FROM wp_rank_math_analytics_gsc
+					WHERE 1 = 1 AND created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59'  AND query IN ('')
+					GROUP BY query) as t1
+			LEFT JOIN
+				( SELECT query, SUM( clicks ) as clicks, SUM(impressions) as impressions, AVG(ctr) as ctr
+					FROM wp_rank_math_analytics_gsc
+					WHERE 1 = 1 AND created BETWEEN '2023-08-10 00:00:00' AND '2023-09-12 23:59:59'  AND query IN ('')
+					GROUP BY query) as t2
+			ON t1.query = t2.query made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, apply_filters('rank_math/analytics/keywords_overview'), WP_Hook->apply_filters, RankMathPro\Analytics\Keywords->add_winning_losing_data, RankMathPro\Analytics\Keywords->get_losing_keywords, RankMath\Analytics\Stats->get_analytics_data, RankMath\Analytics\Stats->get_metrics_data_by_dimension
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT COUNT(DISTINCT(query))
+				FROM wp_rank_math_analytics_gsc
+				WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59'
+				GROUP BY Date(created)
+				ORDER BY Date(created) DESC
+				LIMIT 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, RankMath\Analytics\Summary->get_keywords_summary
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT COUNT(DISTINCT(query))
+				FROM wp_rank_math_analytics_gsc
+				WHERE created BETWEEN '2023-08-10 00:00:00' AND '2023-09-12 23:59:59'
+				GROUP BY Date(created)
+				ORDER BY Date(created) DESC
+				LIMIT 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, RankMath\Analytics\Summary->get_keywords_summary
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT a.query, a.position, t.date, t.range_group
+			FROM wp_rank_math_analytics_gsc AS a
+			INNER JOIN
+				(SELECT query, DATE_FORMAT(created, '%Y-%m-%d') as date, MAX(id) as id, CASE WHEN created BETWEEN '2023-09-16 00:00:00' AND '2023-09-21 23:59:59' THEN 'range1' WHEN created BETWEEN '2023-09-22 00:00:00' AND '2023-09-27 23:59:59' THEN 'range2' WHEN created BETWEEN '2023-09-28 00:00:00' AND '2023-10-03 23:59:59' THEN 'range3' WHEN created BETWEEN '2023-10-04 00:00:00' AND '2023-10-09 23:59:59' THEN 'range4' WHEN created BETWEEN '2023-10-10 00:00:00' AND '2023-10-16 23:59:59' THEN 'range5' ELSE 'none' END AS 'range_group'
+				FROM wp_rank_math_analytics_gsc
+				WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59'
+					AND query IN ('')
+				GROUP BY query, range_group
+				ORDER BY created ASC) AS t ON a.id = t.id
+			 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, apply_filters('rank_math/analytics/keywords_overview'), WP_Hook->apply_filters, RankMathPro\Analytics\Keywords->add_winning_losing_data, RankMathPro\Analytics\Keywords->get_losing_keywords, RankMathPro\Analytics\Keywords->get_graph_data_for_keywords
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT DATE_FORMAT( created, '%Y-%m-%d') as date, SUM(clicks) as clicks, SUM(impressions) as impressions, AVG(position) as position, AVG(ctr) as ctr, CASE WHEN created BETWEEN '2023-09-16 00:00:00' AND '2023-09-21 23:59:59' THEN 'range1' WHEN created BETWEEN '2023-09-22 00:00:00' AND '2023-09-27 23:59:59' THEN 'range2' WHEN created BETWEEN '2023-09-28 00:00:00' AND '2023-10-03 23:59:59' THEN 'range3' WHEN created BETWEEN '2023-10-04 00:00:00' AND '2023-10-09 23:59:59' THEN 'range4' WHEN created BETWEEN '2023-10-10 00:00:00' AND '2023-10-16 23:59:59' THEN 'range5' ELSE 'none' END AS 'range_group'
+			FROM wp_rank_math_analytics_gsc
+			WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59'
+			GROUP BY range_group made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, RankMath\Analytics\Summary->get_analytics_summary_graph
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT t.range_group, MAX(CONCAT(t.range_group, ':', t.date, ':', t.keywords )) as mixed FROM
+				(SELECT COUNT(DISTINCT(query)) as keywords, Date(created) as date, CASE WHEN created BETWEEN '2023-09-16 00:00:00' AND '2023-09-21 23:59:59' THEN 'range1' WHEN created BETWEEN '2023-09-22 00:00:00' AND '2023-09-27 23:59:59' THEN 'range2' WHEN created BETWEEN '2023-09-28 00:00:00' AND '2023-10-03 23:59:59' THEN 'range3' WHEN created BETWEEN '2023-10-04 00:00:00' AND '2023-10-09 23:59:59' THEN 'range4' WHEN created BETWEEN '2023-10-10 00:00:00' AND '2023-10-16 23:59:59' THEN 'range5' ELSE 'none' END AS 'range_group'
+				FROM wp_rank_math_analytics_gsc
+				WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59'
+				GROUP BY range_group, Date(created)) AS t
+			GROUP BY t.range_group made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, RankMath\Analytics\Summary->get_analytics_summary_graph
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT SUM(clicks) AS clicks FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59' LIMIT 0, 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, apply_filters('rank_math/analytics/summary'), WP_Hook->apply_filters, RankMathPro\Analytics\Summary->get_clicks_summary, MyThemeShop\Database\Query_Builder->getVar, MyThemeShop\Database\Query_Builder->one
+[19-Oct-2023 22:58:01 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT SUM(clicks) AS clicks FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-08-10 00:00:00' AND '2023-09-12 23:59:59' LIMIT 0, 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, apply_filters('rank_math/analytics/summary'), WP_Hook->apply_filters, RankMathPro\Analytics\Summary->get_clicks_summary, MyThemeShop\Database\Query_Builder->getVar, MyThemeShop\Database\Query_Builder->one
+[19-Oct-2023 23:09:17 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT COUNT(DISTINCT(page)) AS posts, SUM(impressions) AS impressions, SUM(clicks) AS clicks, AVG(position) AS position, AVG(ctr) AS ctr FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59' LIMIT 0, 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, MyThemeShop\Database\Query_Builder->one
+[19-Oct-2023 23:09:17 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT COUNT(DISTINCT(page)) AS posts, SUM(impressions) AS impressions, SUM(clicks) AS clicks, AVG(position) AS position, AVG(ctr) AS ctr FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-08-10 00:00:00' AND '2023-09-12 23:59:59' LIMIT 0, 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, MyThemeShop\Database\Query_Builder->one
+[19-Oct-2023 23:09:17 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT COUNT(DISTINCT(query))
+				FROM wp_rank_math_analytics_gsc
+				WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59'
+				GROUP BY Date(created)
+				ORDER BY Date(created) DESC
+				LIMIT 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, RankMath\Analytics\Summary->get_keywords_summary
+[19-Oct-2023 23:09:17 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT COUNT(DISTINCT(query))
+				FROM wp_rank_math_analytics_gsc
+				WHERE created BETWEEN '2023-08-10 00:00:00' AND '2023-09-12 23:59:59'
+				GROUP BY Date(created)
+				ORDER BY Date(created) DESC
+				LIMIT 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, RankMath\Analytics\Summary->get_keywords_summary
+[19-Oct-2023 23:09:17 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT DATE_FORMAT( created, '%Y-%m-%d') as date, SUM(clicks) as clicks, SUM(impressions) as impressions, AVG(position) as position, AVG(ctr) as ctr, CASE WHEN created BETWEEN '2023-09-16 00:00:00' AND '2023-09-21 23:59:59' THEN 'range1' WHEN created BETWEEN '2023-09-22 00:00:00' AND '2023-09-27 23:59:59' THEN 'range2' WHEN created BETWEEN '2023-09-28 00:00:00' AND '2023-10-03 23:59:59' THEN 'range3' WHEN created BETWEEN '2023-10-04 00:00:00' AND '2023-10-09 23:59:59' THEN 'range4' WHEN created BETWEEN '2023-10-10 00:00:00' AND '2023-10-16 23:59:59' THEN 'range5' ELSE 'none' END AS 'range_group'
+			FROM wp_rank_math_analytics_gsc
+			WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59'
+			GROUP BY range_group made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, RankMath\Analytics\Summary->get_analytics_summary_graph
+[19-Oct-2023 23:09:17 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT t.range_group, MAX(CONCAT(t.range_group, ':', t.date, ':', t.keywords )) as mixed FROM
+				(SELECT COUNT(DISTINCT(query)) as keywords, Date(created) as date, CASE WHEN created BETWEEN '2023-09-16 00:00:00' AND '2023-09-21 23:59:59' THEN 'range1' WHEN created BETWEEN '2023-09-22 00:00:00' AND '2023-09-27 23:59:59' THEN 'range2' WHEN created BETWEEN '2023-09-28 00:00:00' AND '2023-10-03 23:59:59' THEN 'range3' WHEN created BETWEEN '2023-10-04 00:00:00' AND '2023-10-09 23:59:59' THEN 'range4' WHEN created BETWEEN '2023-10-10 00:00:00' AND '2023-10-16 23:59:59' THEN 'range5' ELSE 'none' END AS 'range_group'
+				FROM wp_rank_math_analytics_gsc
+				WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59'
+				GROUP BY range_group, Date(created)) AS t
+			GROUP BY t.range_group made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, RankMath\Analytics\Summary->get_analytics_summary_graph
+[19-Oct-2023 23:09:17 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT SUM(clicks) AS clicks FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59' LIMIT 0, 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, apply_filters('rank_math/analytics/summary'), WP_Hook->apply_filters, RankMathPro\Analytics\Summary->get_clicks_summary, MyThemeShop\Database\Query_Builder->getVar, MyThemeShop\Database\Query_Builder->one
+[19-Oct-2023 23:09:17 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT SUM(clicks) AS clicks FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-08-10 00:00:00' AND '2023-09-12 23:59:59' LIMIT 0, 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_dashboard, RankMath\Analytics\Summary->get_analytics_summary, apply_filters('rank_math/analytics/summary'), WP_Hook->apply_filters, RankMathPro\Analytics\Summary->get_clicks_summary, MyThemeShop\Database\Query_Builder->getVar, MyThemeShop\Database\Query_Builder->one
+[19-Oct-2023 23:09:17 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT MAX(DATE(created)) as date, CASE WHEN created BETWEEN '2023-09-16 00:00:00' AND '2023-09-21 23:59:59' THEN 'range1' WHEN created BETWEEN '2023-09-22 00:00:00' AND '2023-09-27 23:59:59' THEN 'range2' WHEN created BETWEEN '2023-09-28 00:00:00' AND '2023-10-03 23:59:59' THEN 'range3' WHEN created BETWEEN '2023-10-04 00:00:00' AND '2023-10-09 23:59:59' THEN 'range4' WHEN created BETWEEN '2023-10-10 00:00:00' AND '2023-10-16 23:59:59' THEN 'range5' ELSE 'none' END AS 'range_group'
+			FROM wp_rank_math_analytics_gsc
+			WHERE created BETWEEN '2023-09-13 00:00:00' AND '2023-10-16 23:59:59'
+			GROUP BY range_group made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Analytics\Rest->get_keywords_overview, RankMath\Analytics\Keywords->get_top_position_graph
+[20-Oct-2023 02:58:14 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT SUM(impressions) AS impressions, SUM(clicks) AS clicks, AVG(position) AS position FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-09-14 00:00:00' AND '2023-10-17 23:59:59' LIMIT 0, 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Rest\Admin->dashboard_widget_items, RankMath\Rest\Admin->do_action, do_action_ref_array('rank_math/dashboard/widget'), WP_Hook->do_action, WP_Hook->apply_filters, RankMath\Analytics\Analytics_Common->dashboard_widget, RankMath\Analytics\Analytics_Common->get_dashboard_widget_items, RankMath\Analytics\Summary->get_widget, MyThemeShop\Database\Query_Builder->one
+[20-Oct-2023 02:58:14 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT SUM(impressions) AS impressions, SUM(clicks) AS clicks, AVG(position) AS position FROM wp_rank_math_analytics_gsc WHERE created BETWEEN '2023-08-11 00:00:00' AND '2023-09-13 23:59:59' LIMIT 0, 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Rest\Admin->dashboard_widget_items, RankMath\Rest\Admin->do_action, do_action_ref_array('rank_math/dashboard/widget'), WP_Hook->do_action, WP_Hook->apply_filters, RankMath\Analytics\Analytics_Common->dashboard_widget, RankMath\Analytics\Analytics_Common->get_dashboard_widget_items, RankMath\Analytics\Summary->get_widget, MyThemeShop\Database\Query_Builder->one
+[20-Oct-2023 02:58:14 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT COUNT(DISTINCT(query))
+				FROM wp_rank_math_analytics_gsc
+				WHERE created BETWEEN '2023-09-14 00:00:00' AND '2023-10-17 23:59:59'
+				GROUP BY Date(created)
+				ORDER BY Date(created) DESC
+				LIMIT 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Rest\Admin->dashboard_widget_items, RankMath\Rest\Admin->do_action, do_action_ref_array('rank_math/dashboard/widget'), WP_Hook->do_action, WP_Hook->apply_filters, RankMath\Analytics\Analytics_Common->dashboard_widget, RankMath\Analytics\Analytics_Common->get_dashboard_widget_items, RankMath\Analytics\Summary->get_widget, RankMath\Analytics\Summary->get_keywords_summary
+[20-Oct-2023 02:58:14 UTC] WordPress database error Table 'webappblog.wp_rank_math_analytics_gsc' doesn't exist for query SELECT COUNT(DISTINCT(query))
+				FROM wp_rank_math_analytics_gsc
+				WHERE created BETWEEN '2023-08-11 00:00:00' AND '2023-09-13 23:59:59'
+				GROUP BY Date(created)
+				ORDER BY Date(created) DESC
+				LIMIT 1 made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, RankMath\Rest\Admin->dashboard_widget_items, RankMath\Rest\Admin->do_action, do_action_ref_array('rank_math/dashboard/widget'), WP_Hook->do_action, WP_Hook->apply_filters, RankMath\Analytics\Analytics_Common->dashboard_widget, RankMath\Analytics\Analytics_Common->get_dashboard_widget_items, RankMath\Analytics\Summary->get_widget, RankMath\Analytics\Summary->get_keywords_summary
+[21-Oct-2023 07:08:24 UTC] Cron unschedule event error for hook: do_pings, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":false,"args":[]}
+[23-Oct-2023 20:53:41 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[08-Nov-2023 05:13:10 UTC] Cron unschedule event error for hook: wp_https_detection, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"twicedaily","args":[],"interval":43200}

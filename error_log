@@ -1,0 +1,66 @@
+[05-Oct-2023 03:57:45 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'webappform'@'localhost' to database 'webappform' in /home/griievz70lba/public_html/webappsolution.org/includes/db.php on line 8
+[05-Oct-2023 03:57:45 UTC] PHP Notice:  Undefined variable: name in /home/griievz70lba/public_html/webappsolution.org/update.php on line 72
+[05-Oct-2023 03:57:45 UTC] PHP Notice:  Undefined variable: batch in /home/griievz70lba/public_html/webappsolution.org/update.php on line 76
+[05-Oct-2023 03:57:45 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 80
+[05-Oct-2023 03:57:45 UTC] PHP Notice:  Undefined variable: image in /home/griievz70lba/public_html/webappsolution.org/update.php on line 84
+[05-Oct-2023 03:57:45 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 85
+[09-Oct-2023 21:03:16 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'webappform'@'localhost' to database 'webappform' in /home/griievz70lba/public_html/webappsolution.org/includes/db.php on line 8
+[09-Oct-2023 21:03:16 UTC] PHP Notice:  Undefined variable: name in /home/griievz70lba/public_html/webappsolution.org/update.php on line 72
+[09-Oct-2023 21:03:16 UTC] PHP Notice:  Undefined variable: batch in /home/griievz70lba/public_html/webappsolution.org/update.php on line 76
+[09-Oct-2023 21:03:16 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 80
+[09-Oct-2023 21:03:16 UTC] PHP Notice:  Undefined variable: image in /home/griievz70lba/public_html/webappsolution.org/update.php on line 84
+[09-Oct-2023 21:03:16 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 85
+[20-Oct-2023 11:24:24 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'webappform'@'localhost' to database 'webappform' in /home/griievz70lba/public_html/webappsolution.org/includes/db.php on line 8
+[20-Oct-2023 11:24:24 UTC] PHP Notice:  Undefined variable: name in /home/griievz70lba/public_html/webappsolution.org/update.php on line 72
+[20-Oct-2023 11:24:24 UTC] PHP Notice:  Undefined variable: batch in /home/griievz70lba/public_html/webappsolution.org/update.php on line 76
+[20-Oct-2023 11:24:24 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 80
+[20-Oct-2023 11:24:24 UTC] PHP Notice:  Undefined variable: image in /home/griievz70lba/public_html/webappsolution.org/update.php on line 84
+[20-Oct-2023 11:24:24 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 85
+[05-Nov-2023 03:33:02 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'webappform'@'localhost' to database 'webappform' in /home/griievz70lba/public_html/webappsolution.org/includes/db.php on line 8
+[05-Nov-2023 03:33:02 UTC] PHP Notice:  Undefined variable: name in /home/griievz70lba/public_html/webappsolution.org/update.php on line 72
+[05-Nov-2023 03:33:02 UTC] PHP Notice:  Undefined variable: batch in /home/griievz70lba/public_html/webappsolution.org/update.php on line 76
+[05-Nov-2023 03:33:02 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 80
+[05-Nov-2023 03:33:02 UTC] PHP Notice:  Undefined variable: image in /home/griievz70lba/public_html/webappsolution.org/update.php on line 84
+[05-Nov-2023 03:33:02 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 85
+[05-Nov-2023 20:27:37 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'webappform'@'localhost' to database 'webappform' in /home/griievz70lba/public_html/webappsolution.org/includes/db.php on line 8
+[05-Nov-2023 20:27:37 UTC] PHP Notice:  Undefined variable: name in /home/griievz70lba/public_html/webappsolution.org/update.php on line 72
+[05-Nov-2023 20:27:37 UTC] PHP Notice:  Undefined variable: batch in /home/griievz70lba/public_html/webappsolution.org/update.php on line 76
+[05-Nov-2023 20:27:37 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 80
+[05-Nov-2023 20:27:37 UTC] PHP Notice:  Undefined variable: image in /home/griievz70lba/public_html/webappsolution.org/update.php on line 84
+[05-Nov-2023 20:27:37 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 85
+[16-Nov-2023 18:26:05 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'webappform'@'localhost' to database 'webappform' in /home/griievz70lba/public_html/webappsolution.org/includes/db.php on line 8
+[16-Nov-2023 18:26:05 UTC] PHP Notice:  Undefined variable: name in /home/griievz70lba/public_html/webappsolution.org/update.php on line 72
+[16-Nov-2023 18:26:05 UTC] PHP Notice:  Undefined variable: batch in /home/griievz70lba/public_html/webappsolution.org/update.php on line 76
+[16-Nov-2023 18:26:05 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 80
+[16-Nov-2023 18:26:05 UTC] PHP Notice:  Undefined variable: image in /home/griievz70lba/public_html/webappsolution.org/update.php on line 84
+[16-Nov-2023 18:26:05 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 85
+[26-Nov-2023 09:35:32 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'webappform'@'localhost' to database 'webappform' in /home/griievz70lba/public_html/webappsolution.org/includes/db.php on line 8
+[26-Nov-2023 09:35:32 UTC] PHP Notice:  Undefined variable: name in /home/griievz70lba/public_html/webappsolution.org/update.php on line 72
+[26-Nov-2023 09:35:32 UTC] PHP Notice:  Undefined variable: batch in /home/griievz70lba/public_html/webappsolution.org/update.php on line 76
+[26-Nov-2023 09:35:32 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 80
+[26-Nov-2023 09:35:32 UTC] PHP Notice:  Undefined variable: image in /home/griievz70lba/public_html/webappsolution.org/update.php on line 84
+[26-Nov-2023 09:35:32 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 85
+[26-Nov-2023 19:28:29 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'webappform'@'localhost' to database 'webappform' in /home/griievz70lba/public_html/webappsolution.org/includes/db.php on line 8
+[26-Nov-2023 19:28:29 UTC] PHP Notice:  Undefined variable: name in /home/griievz70lba/public_html/webappsolution.org/update.php on line 72
+[26-Nov-2023 19:28:29 UTC] PHP Notice:  Undefined variable: batch in /home/griievz70lba/public_html/webappsolution.org/update.php on line 76
+[26-Nov-2023 19:28:29 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 80
+[26-Nov-2023 19:28:29 UTC] PHP Notice:  Undefined variable: image in /home/griievz70lba/public_html/webappsolution.org/update.php on line 84
+[26-Nov-2023 19:28:29 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 85
+[27-Nov-2023 17:09:15 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'webappform'@'localhost' to database 'webappform' in /home/griievz70lba/public_html/webappsolution.org/includes/db.php on line 8
+[27-Nov-2023 17:09:15 UTC] PHP Notice:  Undefined variable: name in /home/griievz70lba/public_html/webappsolution.org/update.php on line 72
+[27-Nov-2023 17:09:15 UTC] PHP Notice:  Undefined variable: batch in /home/griievz70lba/public_html/webappsolution.org/update.php on line 76
+[27-Nov-2023 17:09:15 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 80
+[27-Nov-2023 17:09:15 UTC] PHP Notice:  Undefined variable: image in /home/griievz70lba/public_html/webappsolution.org/update.php on line 84
+[27-Nov-2023 17:09:15 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 85
+[27-Nov-2023 18:48:06 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'webappform'@'localhost' to database 'webappform' in /home/griievz70lba/public_html/webappsolution.org/includes/db.php on line 8
+[27-Nov-2023 18:48:06 UTC] PHP Notice:  Undefined variable: name in /home/griievz70lba/public_html/webappsolution.org/update.php on line 72
+[27-Nov-2023 18:48:06 UTC] PHP Notice:  Undefined variable: batch in /home/griievz70lba/public_html/webappsolution.org/update.php on line 76
+[27-Nov-2023 18:48:06 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 80
+[27-Nov-2023 18:48:06 UTC] PHP Notice:  Undefined variable: image in /home/griievz70lba/public_html/webappsolution.org/update.php on line 84
+[27-Nov-2023 18:48:06 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 85
+[28-Nov-2023 11:55:16 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'webappform'@'localhost' to database 'webappform' in /home/griievz70lba/public_html/webappsolution.org/includes/db.php on line 8
+[28-Nov-2023 11:55:16 UTC] PHP Notice:  Undefined variable: name in /home/griievz70lba/public_html/webappsolution.org/update.php on line 72
+[28-Nov-2023 11:55:16 UTC] PHP Notice:  Undefined variable: batch in /home/griievz70lba/public_html/webappsolution.org/update.php on line 76
+[28-Nov-2023 11:55:16 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 80
+[28-Nov-2023 11:55:16 UTC] PHP Notice:  Undefined variable: image in /home/griievz70lba/public_html/webappsolution.org/update.php on line 84
+[28-Nov-2023 11:55:16 UTC] PHP Notice:  Undefined variable: email in /home/griievz70lba/public_html/webappsolution.org/update.php on line 85
