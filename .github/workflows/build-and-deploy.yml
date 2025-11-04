@@ -1,0 +1,47 @@
+name: Build and deploy PHP site as static to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+
+    - name: Install dependencies (if any)
+      run: |
+        if [ -f composer.json ]; then composer install --no-dev --no-interaction --no-progress || true; fi
+
+    - name: Start PHP built-in server
+      run: |
+        php -S 127.0.0.1:8000 -t . >/dev/null 2>&1 &
+        sleep 2
+
+    - name: Install wget
+      run: sudo apt-get update && sudo apt-get install -y wget
+
+    - name: Crawl site to produce static files
+      run: |
+        # mirror the local dev server into the 'export' folder
+        rm -rf export || true
+        mkdir export
+        wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://127.0.0.1:8000/ -P export
+        # wget creates a folder like export/127.0.0.1:8000 — move contents up if present
+        if [ -d export/127.0.0.1:8000 ]; then mv export/127.0.0.1:8000/* export/ || true; fi
+        # cleanup possible empty folders
+        find export -type d -empty -delete || true
+
+    - name: Deploy to GitHub Pages (gh-pages branch)
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./export
