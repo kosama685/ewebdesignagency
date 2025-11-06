@@ -1,9 +1,8 @@
-name: Deploy static site to Pages
+name: Build and deploy PHP site as static to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch:
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -12,55 +11,60 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
-          tools: composer
+          php-version: '8.1'
 
-      - name: Install dependencies (if you have composer.json)
-        run: composer install --no-dev --no-progress --no-suggest
-
-      - name: Start PHP server
+      - name: Install dependencies (if any)
         run: |
-          php -S 127.0.0.1:8000 &
-          sleep 5 # Wait for server to start
+          if [ -f composer.json ]; then
+            composer install --no-dev --no-interaction --no-progress
+          fi
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-
-      - name: Build with Wget (with retry logic)
+      - name: Start PHP built-in server with router
         run: |
-          mkdir -p _site
-          # Try wget with better error handling
-          wget --recursive \
-               --no-verbose \
-               --convert-links \
-               --page-requisites \
-               --adjust-extension \
-               --no-parent \
-               --no-host-directories \
-               --retry-connrefused \
-               --tries=3 \
-               --timeout=30 \
-               http://127.0.0.1:8000 || echo "wget completed with warnings"
-          
-          # Move files to _site directory
-          mv 127.0.0.1:8000/* _site/ 2>/dev/null || true
+          php -S 127.0.0.1:8000 router.php > /dev/null 2>&1 &
+          sleep 5
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: Install wget
+        run: sudo apt-get update && sudo apt-get install -y wget
+
+      - name: Crawl site to produce static files
+        run: |
+          rm -rf export || true
+          mkdir export
+
+          wget --mirror \
+            --convert-links \
+            --adjust-extension \
+            --page-requisites \
+            --no-parent \
+            --span-hosts \
+            --retry-connrefused \
+            --tries=5 \
+            --waitretry=2 \
+            http://127.0.0.1:8000/ -P export || true
+
+          if [ -d export/127.0.0.1:8000 ]; then 
+            mv export/127.0.0.1:8000/* export/ || true
+          fi
+
+          find export -type d -empty -delete || true
+
+      - name: Upload artifact for Pages
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: ./export
 
   deploy:
     environment:
@@ -71,4 +75,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
