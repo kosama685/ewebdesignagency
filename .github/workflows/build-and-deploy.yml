@@ -1,47 +1,74 @@
-name: Build and deploy PHP site as static to GitHub Pages
+name: Deploy static site to Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '8.1'
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
 
-    - name: Install dependencies (if any)
-      run: |
-        if [ -f composer.json ]; then composer install --no-dev --no-interaction --no-progress || true; fi
+      - name: Install dependencies (if you have composer.json)
+        run: composer install --no-dev --no-progress --no-suggest
 
-    - name: Start PHP built-in server
-      run: |
-        php -S 127.0.0.1:8000 -t . >/dev/null 2>&1 &
-        sleep 2
+      - name: Start PHP server
+        run: |
+          php -S 127.0.0.1:8000 &
+          sleep 5 # Wait for server to start
 
-    - name: Install wget
-      run: sudo apt-get update && sudo apt-get install -y wget
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
 
-    - name: Crawl site to produce static files
-      run: |
-        # mirror the local dev server into the 'export' folder
-        rm -rf export || true
-        mkdir export
-        wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://127.0.0.1:8000/ -P export
-        # wget creates a folder like export/127.0.0.1:8000 — move contents up if present
-        if [ -d export/127.0.0.1:8000 ]; then mv export/127.0.0.1:8000/* export/ || true; fi
-        # cleanup possible empty folders
-        find export -type d -empty -delete || true
+      - name: Build with Wget (with retry logic)
+        run: |
+          mkdir -p _site
+          # Try wget with better error handling
+          wget --recursive \
+               --no-verbose \
+               --convert-links \
+               --page-requisites \
+               --adjust-extension \
+               --no-parent \
+               --no-host-directories \
+               --retry-connrefused \
+               --tries=3 \
+               --timeout=30 \
+               http://127.0.0.1:8000 || echo "wget completed with warnings"
+          
+          # Move files to _site directory
+          mv 127.0.0.1:8000/* _site/ 2>/dev/null || true
 
-    - name: Deploy to GitHub Pages (gh-pages branch)
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./export
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./_site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
