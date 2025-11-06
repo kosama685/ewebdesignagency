@@ -16,6 +16,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -25,15 +26,15 @@ jobs:
         with:
           php-version: '8.1'
 
-      - name: Install dependencies (if any)
+      - name: Install dependencies
         run: |
           if [ -f composer.json ]; then
             composer install --no-dev --no-interaction --no-progress
           fi
 
-      - name: Start PHP built-in server with router
+      - name: Start PHP built-in server
         run: |
-          php -S 127.0.0.1:8000 router.php > /dev/null 2>&1 &
+          php -S 127.0.0.1:8000 -t . > /dev/null 2>&1 &
           sleep 5
 
       - name: Install wget
@@ -49,17 +50,20 @@ jobs:
             --adjust-extension \
             --page-requisites \
             --no-parent \
-            --span-hosts \
             --retry-connrefused \
             --tries=5 \
             --waitretry=2 \
             http://127.0.0.1:8000/ -P export || true
 
-          if [ -d export/127.0.0.1:8000 ]; then 
+          if [ -d export/127.0.0.1:8000 ]; then
             mv export/127.0.0.1:8000/* export/ || true
+            rm -rf export/127.0.0.1:8000
           fi
 
           find export -type d -empty -delete || true
+
+          echo "Export folder contents:"
+          ls -R export || true
 
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v3
