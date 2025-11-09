@@ -1,1830 +1,338 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eweb design agency - Expert Web Development Services</title>
-    <meta name="description" content="Eweb design agency is a leading web design agency in the US, offering custom web design, e-commerce solutions, mobile app development, and more. Transform your digital presence today.">
-    <meta name="keywords" content="web design, web development, e-commerce, mobile app, branding, SEO, video animation">
-    <meta name="author" content="Eweb design agency">
+    <title>eWeb Design Agency - Complete IT Solutions | Website Development, ERP Systems, SEO Services</title>
+    <meta name="description" content="eWeb Design Agency offers comprehensive IT solutions including website development, custom software development, complete ERP systems, social media marketing, SEO and ASO services. Transform your business with our expert digital solutions.">
+    <meta name="keywords" content="website development, software development, ERP systems, SEO services, social media marketing, ASO, IT solutions">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Eweb design agency - Expert Web Development Services">
-    <meta property="og:description" content="Transform your digital presence with our expert web development services. Custom solutions for your business needs.">
-    <meta property="og:image" content="https://www.Ewebdesignagency.com/assets/images/pexels-photo-1181449.png">
-    <meta property="og:url" content="https://www.Ewebdesignagency.com">
+    <meta name="last-modified" content="2024-12-19">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ewebdesignagency.com/">
+    <meta property="og:title" content="eWeb Design Agency - Complete IT Solutions">
+    <meta property="og:description" content="Transform your business with our comprehensive IT solutions including website development, ERP systems, and digital marketing services.">
+    <meta property="og:image" content="https://ewebdesignagency.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ewebdesignagency.com/">
+    <meta property="twitter:title" content="eWeb Design Agency - Complete IT Solutions">
+    <meta property="twitter:description" content="Transform your business with our comprehensive IT solutions including website development, ERP systems, and digital marketing services.">
+    <meta property="twitter:image" content="https://ewebdesignagency.com/og-image.jpg">
+
+    <!-- Schema.org markup -->
     
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Eweb design agency - Expert Web Development Services">
-    <meta name="twitter:description" content="Transform your digital presence with our expert web development services. Custom solutions for your business needs.">
-    <meta name="twitter:image" content="https://www.Ewebdesignagency.com/assets/images/pexels-photo-1181449.png">
+
+    <!-- FontAwesome and Remix Icons -->
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
     
-    <!-- Custom CSS -->
+    
     <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --accent-color: #f59e0b;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-light: #f9fafb;
-            --white: #ffffff;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            overflow-x: hidden;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Styles */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo i {
-            margin-right: 10px;
-            font-size: 28px;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--primary-color);
-            transition: var(--transition);
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: var(--text-dark);
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 150px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://picsum.photos/seed/webapp/1920/1080.jpg') center/cover;
-            opacity: 0.2;
-            z-index: -1;
-        }
-        
-        .hero-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 50px;
-        }
-        
-        .hero-text {
-            flex: 1;
-            color: var(--white);
-        }
-        
-        .hero-text h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .hero-text p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            max-width: 500px;
-        }
-        
-        .hero-form {
-            flex: 1;
-            background: var(--white);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-        }
-        
-        .hero-form h3 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: var(--text-dark);
-            text-align: center;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--text-dark);
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: var(--transition);
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: var(--primary-color);
-            color: var(--white);
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            text-align: center;
-            text-decoration: none;
-        }
-        
-        .btn:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
-        }
-        
-        .btn-full {
-            width: 100%;
-            justify-content: center;
-        }
-        
-        .rating {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-            color: var(--text-dark);
-        }
-        
-        .rating i {
-            color: var(--accent-color);
-            margin-left: 5px;
-        }
-        
-        /* Services Section */
-        .services {
-            padding: 80px 0;
-            background: var(--bg-light);
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-title h2 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--text-dark);
-        }
-        
-        .section-title p {
-            font-size: 18px;
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            text-align: center;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: var(--white);
-            font-size: 36px;
-        }
-        
-        .service-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: var(--text-dark);
-        }
-        
-        .service-card p {
-            color: var(--text-light);
-            margin-bottom: 20px;
-        }
-        
-        /* Portfolio Section */
-        .portfolio {
-            padding: 80px 0;
-        }
-        
-        .portfolio-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-        
-        .tab-btn {
-            padding: 10px 20px;
-            margin: 5px;
-            background: var(--white);
-            border: 1px solid #e5e7eb;
-            border-radius: 30px;
-            font-size: 16px;
-            font-weight: 500;
-            color: var(--text-dark);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .tab-btn.active {
-            background: var(--primary-color);
-            color: var(--white);
-            border-color: var(--primary-color);
-        }
-        
-        .tab-btn:hover {
-            background: var(--primary-color);
-            color: var(--white);
-            border-color: var(--primary-color);
-        }
-        
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .portfolio-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-        
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .portfolio-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-        
-        .portfolio-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 20px;
-            opacity: 0;
-            transition: var(--transition);
-        }
-        
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-        
-        .portfolio-overlay h3 {
-            color: var(--white);
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        
-        .portfolio-overlay p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 14px;
-        }
-        
-        /* Pricing Section */
-        .pricing {
-            padding: 80px 0;
-            background: var(--bg-light);
-        }
-        
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .pricing-card {
-            background: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-        
-        .pricing-card.featured {
-            transform: scale(1.05);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-10px);
-        }
-        
-        .pricing-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: var(--white);
-            padding: 30px;
-            text-align: center;
-        }
-        
-        .pricing-card.featured .pricing-header {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-        }
-        
-        .pricing-header h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-        
-        .price {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        .price span {
-            font-size: 18px;
-            font-weight: 400;
-        }
-        
-        .original-price {
-            text-decoration: line-through;
-            opacity: 0.7;
-            font-size: 18px;
-        }
-        
-        .pricing-body {
-            padding: 30px;
-        }
-        
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-        
-        .pricing-features li {
-            padding: 10px 0;
-            border-bottom: 1px solid #e5e7eb;
-            display: flex;
-            align-items: center;
-        }
-        
-        .pricing-features li:last-child {
-            border-bottom: none;
-        }
-        
-        .pricing-features i {
-            color: var(--primary-color);
-            margin-right: 10px;
-        }
-        
-        .pricing-card.featured .pricing-features i {
-            color: var(--accent-color);
-        }
-        
-        /* Testimonials Section */
-        .testimonials {
-            padding: 80px 0;
-        }
-        
-        .testimonials-slider {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .testimonial {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            text-align: center;
-        }
-        
-        .testimonial-text {
-            font-size: 18px;
-            font-style: italic;
-            margin-bottom: 30px;
-            color: var(--text-light);
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .author-image {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            margin-right: 15px;
-            object-fit: cover;
-        }
-        
-        .author-info h4 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-        
-        .author-info p {
-            color: var(--text-light);
-            font-size: 14px;
-        }
-        
-        .testimonial-nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        
-        .testimonial-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #e5e7eb;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .testimonial-dot.active {
-            background: var(--primary-color);
-        }
-        
-        /* Clients Section */
-        .clients {
-            padding: 80px 0;
-            background: var(--bg-light);
-        }
-        
-        .clients-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 30px;
-            align-items: center;
-        }
-        
-        .client-logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100px;
-            filter: grayscale(100%);
-            opacity: 0.7;
-            transition: var(--transition);
-        }
-        
-        .client-logo:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-        }
-        
-        .client-logo img {
-            max-width: 100%;
-            max-height: 60px;
-        }
-        
-        /* Contact Section */
-        .contact {
-            padding: 80px 0;
-        }
-        
-        .contact-content {
-            display: flex;
-            gap: 50px;
-        }
-        
-        .contact-info {
-            flex: 1;
-        }
-        
-        .contact-info h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: var(--text-dark);
-        }
-        
-        .contact-info p {
-            font-size: 16px;
-            color: var(--text-light);
-            margin-bottom: 30px;
-        }
-        
-        .contact-details {
-            margin-bottom: 30px;
-        }
-        
-        .contact-details h4 {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: var(--text-dark);
-        }
-        
-        .contact-details p {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            color: var(--text-light);
-        }
-        
-        .contact-details i {
-            margin-right: 10px;
-            color: var(--primary-color);
-        }
-        
-        .contact-form {
-            flex: 1;
-        }
-        
-        /* Footer */
-        footer {
-            background: #1f2937;
-            color: var(--white);
-            padding: 50px 0 20px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .footer-column h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: var(--white);
-        }
-        
-        .footer-column p {
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 20px;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .footer-links a:hover {
-            color: var(--white);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--white);
-            transition: var(--transition);
-        }
-        
-        .social-links a:hover {
-            background: var(--primary-color);
-            transform: translateY(-3px);
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .hero-content {
-                flex-direction: column;
-            }
-            
-            .hero-text h1 {
-                font-size: 36px;
-            }
-            
-            .contact-content {
-                flex-direction: column;
-            }
-            
-            .pricing-card.featured {
-                transform: scale(1);
-            }
-            
-            .pricing-card.featured:hover {
-                transform: translateY(-10px);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero {
-                padding: 120px 0 60px;
-            }
-            
-            .hero-text h1 {
-                font-size: 28px;
-            }
-            
-            .section-title h2 {
-                font-size: 28px;
-            }
-            
-            .services-grid,
-            .portfolio-grid,
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Loading Spinner */
-        .spinner {
-            display: none;
-            width: 40px;
-            height: 40px;
-            margin: 20px auto;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top-color: var(--white);
-            animation: spin 1s ease-in-out infinite;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        /* Success Message */
-        .success-message {
-            display: none;
-            background: #10b981;
-            color: var(--white);
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            text-align: center;
-        }
-        
-        .error-message {
-            display: none;
-            background: #ef4444;
-            color: var(--white);
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            text-align: center;
-        }
+        /*! CSS Used from: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css */
+:root{--fa-style-family-brands:"Font Awesome 6 Brands";--fa-font-brands:normal 400 1em/1 "Font Awesome 6 Brands";}
+:root{--fa-font-regular:normal 400 1em/1 "Font Awesome 6 Free";}
+:root{--fa-style-family-classic:"Font Awesome 6 Free";--fa-font-solid:normal 900 1em/1 "Font Awesome 6 Free";}
+/*! CSS Used from: https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css */
+[class^="ri-"]{font-family:'remixicon'!important;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.ri-add-line:before{content:"\ea13";}
+.ri-arrow-down-line:before{content:"\ea4c";}
+.ri-arrow-down-s-line:before{content:"\ea4e";}
+.ri-arrow-left-line:before{content:"\ea60";}
+.ri-arrow-right-line:before{content:"\ea6c";}
+.ri-award-line:before{content:"\ea8a";}
+.ri-check-line:before{content:"\eb7b";}
+.ri-code-s-slash-line:before{content:"\ebad";}
+.ri-computer-line:before{content:"\ebca";}
+.ri-customer-service-2-line:before{content:"\ec0c";}
+.ri-database-2-line:before{content:"\ec16";}
+.ri-facebook-fill:before{content:"\ecbc";}
+.ri-global-line:before{content:"\edcf";}
+.ri-instagram-fill:before{content:"\ee65";}
+.ri-lightbulb-line:before{content:"\eea9";}
+.ri-linkedin-fill:before{content:"\eeb5";}
+.ri-mail-line:before{content:"\eef6";}
+.ri-menu-line:before{content:"\ef3e";}
+.ri-phone-line:before{content:"\efec";}
+.ri-rocket-line:before{content:"\f096";}
+.ri-search-line:before{content:"\f0d1";}
+.ri-share-line:before{content:"\f0fe";}
+.ri-shield-check-line:before{content:"\f100";}
+.ri-smartphone-line:before{content:"\f15a";}
+.ri-star-fill:before{content:"\f186";}
+.ri-subtract-line:before{content:"\f1af";}
+.ri-team-line:before{content:"\f1ee";}
+.ri-time-line:before{content:"\f20f";}
+.ri-trophy-line:before{content:"\f22f";}
+.ri-twitter-fill:before{content:"\f23a";}
+.ri-user-heart-line:before{content:"\f263";}
+/*! CSS Used from: https://readdy.ai/preview/e1c3742d-3c2b-486b-91d9-3015b5f8c6cd/3911917/assets/index-nbC8ppKd.css */
+*,:before,:after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-scroll-snap-strictness:proximity;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / .5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;}
+*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb;}
+:before,:after{--tw-content:"";}
+html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent;}
+body{margin:0;line-height:inherit;}
+h1,h2,h3,h4,h5{font-size:inherit;font-weight:inherit;}
+a{color:inherit;text-decoration:inherit;}
+button,input,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0;}
+button,select{text-transform:none;}
+button{-webkit-appearance:button;background-color:transparent;background-image:none;}
+blockquote,h1,h2,h3,h4,h5,p{margin:0;}
+ul{list-style:none;margin:0;padding:0;}
+textarea{resize:vertical;}
+input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af;}
+button{cursor:pointer;}
+:disabled{cursor:default;}
+img,svg{display:block;vertical-align:middle;}
+img{max-width:100%;height:auto;}
+.container{width:100%;}
+@media (min-width:640px){
+.container{max-width:640px;}
+}
+@media (min-width:768px){
+.container{max-width:768px;}
+}
+@media (min-width:1024px){
+.container{max-width:1024px;}
+}
+@media (min-width:1280px){
+.container{max-width:1280px;}
+}
+@media (min-width:1536px){
+.container{max-width:1536px;}
+}
+.pointer-events-none{pointer-events:none;}
+.fixed{position:fixed;}
+.absolute{position:absolute;}
+.relative{position:relative;}
+.-bottom-6{bottom:-1.5rem;}
+.-left-6{left:-1.5rem;}
+.-top-4{top:-1rem;}
+.bottom-8{bottom:2rem;}
+.left-0{left:0;}
+.left-1\/2{left:50%;}
+.left-4{left:1rem;}
+.right-0{right:0;}
+.right-3{right:.75rem;}
+.top-0{top:0;}
+.top-1\/2{top:50%;}
+.top-4{top:1rem;}
+.z-10{z-index:10;}
+.z-50{z-index:50;}
+.mx-1{margin-left:.25rem;margin-right:.25rem;}
+.mx-auto{margin-left:auto;margin-right:auto;}
+.mb-12{margin-bottom:3rem;}
+.mb-16{margin-bottom:4rem;}
+.mb-2{margin-bottom:.5rem;}
+.mb-20{margin-bottom:5rem;}
+.mb-3{margin-bottom:.75rem;}
+.mb-4{margin-bottom:1rem;}
+.mb-6{margin-bottom:1.5rem;}
+.mb-8{margin-bottom:2rem;}
+.ml-10{margin-left:2.5rem;}
+.mr-2{margin-right:.5rem;}
+.mr-3{margin-right:.75rem;}
+.mr-4{margin-right:1rem;}
+.mt-1{margin-top:.25rem;}
+.mt-12{margin-top:3rem;}
+.mt-16{margin-top:4rem;}
+.mt-6{margin-top:1.5rem;}
+.mt-8{margin-top:2rem;}
+.block{display:block;}
+.flex{display:flex;}
+.grid{display:grid;}
+.hidden{display:none;}
+.h-10{height:2.5rem;}
+.h-12{height:3rem;}
+.h-16{height:4rem;}
+.h-3{height:.75rem;}
+.h-48{height:12rem;}
+.h-96{height:24rem;}
+.min-h-screen{min-height:100vh;}
+.w-10{width:2.5rem;}
+.w-12{width:3rem;}
+.w-16{width:4rem;}
+.w-3{width:.75rem;}
+.w-full{width:100%;}
+.max-w-3xl{max-width:48rem;}
+.max-w-4xl{max-width:56rem;}
+.max-w-7xl{max-width:80rem;}
+.flex-shrink-0{flex-shrink:0;}
+.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
+.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
+.scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
+.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
+.animate-bounce{animation:bounce 1s infinite;}
+.cursor-pointer{cursor:pointer;}
+.appearance-none{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr));}
+.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.flex-col{flex-direction:column;}
+.flex-wrap{flex-wrap:wrap;}
+.items-start{align-items:flex-start;}
+.items-center{align-items:center;}
+.items-baseline{align-items:baseline;}
+.justify-center{justify-content:center;}
+.justify-between{justify-content:space-between;}
+.gap-16{gap:4rem;}
+.gap-2{gap:.5rem;}
+.gap-4{gap:1rem;}
+.gap-6{gap:1.5rem;}
+.gap-8{gap:2rem;}
+.space-x-2>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(.5rem * var(--tw-space-x-reverse));margin-left:calc(.5rem * calc(1 - var(--tw-space-x-reverse)));}
+.space-x-4>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)));}
+.space-x-6>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));}
+.space-x-8>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)));}
+.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem * var(--tw-space-y-reverse));}
+.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem * var(--tw-space-y-reverse));}
+.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse));}
+.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse));}
+.overflow-hidden{overflow:hidden;}
+.whitespace-nowrap{white-space:nowrap;}
+.rounded{border-radius:.25rem;}
+.rounded-2xl{border-radius:1rem;}
+.rounded-full{border-radius:9999px;}
+.rounded-lg{border-radius:.5rem;}
+.rounded-xl{border-radius:.75rem;}
+.border{border-width:1px;}
+.border-2{border-width:2px;}
+.border-b{border-bottom-width:1px;}
+.border-t{border-top-width:1px;}
+.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1));}
+.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1));}
+.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity, 1));}
+.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity, 1));}
+.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));}
+.bg-gray-300{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1));}
+.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1));}
+.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1));}
+.bg-teal-100{--tw-bg-opacity:1;background-color:rgb(204 251 241 / var(--tw-bg-opacity, 1));}
+.bg-teal-600{--tw-bg-opacity:1;background-color:rgb(13 148 136 / var(--tw-bg-opacity, 1));}
+.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1));}
+.bg-white\/10{background-color:#ffffff1a;}
+.bg-white\/95{background-color:#fffffff2;}
+.bg-cover{background-size:cover;}
+.bg-center{background-position:center;}
+.bg-no-repeat{background-repeat:no-repeat;}
+.object-cover{-o-object-fit:cover;object-fit:cover;}
+.p-2{padding:.5rem;}
+.p-6{padding:1.5rem;}
+.p-8{padding:2rem;}
+.px-2{padding-left:.5rem;padding-right:.5rem;}
+.px-3{padding-left:.75rem;padding-right:.75rem;}
+.px-4{padding-left:1rem;padding-right:1rem;}
+.px-6{padding-left:1.5rem;padding-right:1.5rem;}
+.px-8{padding-left:2rem;padding-right:2rem;}
+.py-1{padding-top:.25rem;padding-bottom:.25rem;}
+.py-16{padding-top:4rem;padding-bottom:4rem;}
+.py-2{padding-top:.5rem;padding-bottom:.5rem;}
+.py-20{padding-top:5rem;padding-bottom:5rem;}
+.py-3{padding-top:.75rem;padding-bottom:.75rem;}
+.py-4{padding-top:1rem;padding-bottom:1rem;}
+.py-6{padding-top:1.5rem;padding-bottom:1.5rem;}
+.pb-6{padding-bottom:1.5rem;}
+.pr-4{padding-right:1rem;}
+.pr-8{padding-right:2rem;}
+.pt-4{padding-top:1rem;}
+.pt-8{padding-top:2rem;}
+.text-left{text-align:left;}
+.text-center{text-align:center;}
+.text-right{text-align:right;}
+.text-2xl{font-size:1.5rem;line-height:2rem;}
+.text-3xl{font-size:1.875rem;line-height:2.25rem;}
+.text-4xl{font-size:2.25rem;line-height:2.5rem;}
+.text-5xl{font-size:3rem;line-height:1;}
+.text-lg{font-size:1.125rem;line-height:1.75rem;}
+.text-sm{font-size:.875rem;line-height:1.25rem;}
+.text-xl{font-size:1.25rem;line-height:1.75rem;}
+.text-xs{font-size:.75rem;line-height:1rem;}
+.font-bold{font-weight:700;}
+.font-medium{font-weight:500;}
+.font-semibold{font-weight:600;}
+.italic{font-style:italic;}
+.leading-relaxed{line-height:1.625;}
+.leading-tight{line-height:1.25;}
+.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1));}
+.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1));}
+.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1));}
+.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1));}
+.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1));}
+.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1));}
+.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1));}
+.text-teal-400{--tw-text-opacity:1;color:rgb(45 212 191 / var(--tw-text-opacity, 1));}
+.text-teal-600{--tw-text-opacity:1;color:rgb(13 148 136 / var(--tw-text-opacity, 1));}
+.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1));}
+.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1));}
+.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / .25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);}
+.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);}
+.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / .05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);}
+.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);}
+.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000);}
+.ring-teal-600{--tw-ring-opacity:1;--tw-ring-color:rgb(13 148 136 / var(--tw-ring-opacity, 1));}
+.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);}
+.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s;}
+.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s;}
+.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s;}
+.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s;}
+.duration-300{transition-duration:.3s;}
+.hover\:-translate-y-2:hover{--tw-translate-y:-.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
+.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
+.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1));}
+.hover\:bg-gray-200:hover{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1));}
+.hover\:bg-teal-700:hover{--tw-bg-opacity:1;background-color:rgb(15 118 110 / var(--tw-bg-opacity, 1));}
+.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1));}
+.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1));}
+.hover\:text-teal-400:hover{--tw-text-opacity:1;color:rgb(45 212 191 / var(--tw-text-opacity, 1));}
+.hover\:text-teal-600:hover{--tw-text-opacity:1;color:rgb(13 148 136 / var(--tw-text-opacity, 1));}
+.hover\:shadow-2xl:hover{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / .25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);}
+.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);}
+.focus\:border-transparent:focus{border-color:transparent;}
+.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000);}
+.focus\:ring-teal-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(20 184 166 / var(--tw-ring-opacity, 1));}
+.disabled\:cursor-not-allowed:disabled{cursor:not-allowed;}
+.disabled\:opacity-50:disabled{opacity:.5;}
+.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
+.group:hover .group-hover\:bg-teal-600{--tw-bg-opacity:1;background-color:rgb(13 148 136 / var(--tw-bg-opacity, 1));}
+.group:hover .group-hover\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1));}
+@media (min-width:640px){
+.sm\:flex-row{flex-direction:row;}
+}
+@media (min-width:768px){
+.md\:mb-0{margin-bottom:0;}
+.md\:block{display:block;}
+.md\:hidden{display:none;}
+.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr));}
+.md\:flex-row{flex-direction:row;}
+}
+@media (min-width:1024px){
+.lg\:col-span-1{grid-column:span 1 / span 1;}
+.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr));}
+.lg\:p-12{padding:3rem;}
+.lg\:px-8{padding-left:2rem;padding-right:2rem;}
+.lg\:text-2xl{font-size:1.5rem;line-height:2rem;}
+.lg\:text-5xl{font-size:3rem;line-height:1;}
+.lg\:text-7xl{font-size:4.5rem;line-height:1;}
+}
+/*! CSS Used keyframes */
+@keyframes bounce{0%,to{transform:translateY(-25%);animation-timing-function:cubic-bezier(.8,0,1,1);}50%{transform:none;animation-timing-function:cubic-bezier(0,0,.2,1);}}
+/*! CSS Used fontfaces */
+@font-face{font-family:"remixicon";src:url('https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.eot?t=1690730386070');src:url('https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.eot?t=1690730386070#iefix') format('embedded-opentype'),    url("https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.woff2?t=1690730386070") format("woff2"),   url("https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.woff?t=1690730386070") format("woff"),   url('https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.ttf?t=1690730386070') format('truetype'),    url('https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.svg?t=1690730386070#remixicon') format('svg');font-display:swap;}
     </style>
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">
-                    <i class="fas fa-code"></i>
-                    Eweb design agency
-                </a>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text" data-aos="fade-right">
-                    <h1>Eweb design agency<sup>&reg;</sup></h1>
-                    <p>As an expert Eweb design agency, we offer a unique and seamless experience for users. We don't just create website design, we create digital stories to make your customers maintain coming back to your website.</p>
-                    <div class="rating">
-                        We are rated 4.5
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        among 700+ satisfied customers.
-                    </div>
-                </div>
-                <div class="hero-form" data-aos="fade-left">
-                    <h3>Get Started Today</h3>
-                    <form id="heroForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required minlength="5">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" required minlength="10" maxlength="10">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-full">Submit</button>
-                        <div class="spinner" id="formSpinner"></div>
-                        <div class="success-message" id="successMessage">
-                            Thank you! Your message has been sent successfully.
-                        </div>
-                        <div class="error-message" id="errorMessage">
-                            Oops! Something went wrong. Please try again later.
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Our Services</h2>
-                <p>We offer a comprehensive range of digital services to help your business thrive in the online world.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Custom websites built with modern technologies to deliver exceptional user experiences and drive business growth.</p>
-                    <a href="#pricing" class="btn">Learn More</a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Mobile App Development</h3>
-                    <p>Native and cross-platform mobile applications that engage users and provide seamless experiences across all devices.</p>
-                    <a href="#pricing" class="btn">Learn More</a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <h3>E-Commerce Solutions</h3>
-                    <p>Powerful e-commerce platforms that help you sell products online with secure payment processing and inventory management.</p>
-                    <a href="#pricing" class="btn">Learn More</a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>UI/UX Design</h3>
-                    <p>Beautiful and intuitive designs that enhance user engagement and create memorable digital experiences.</p>
-                    <a href="#pricing" class="btn">Learn More</a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>SEO Optimization</h3>
-                    <p>Strategic SEO services to improve your search engine rankings and drive organic traffic to your website.</p>
-                    <a href="#pricing" class="btn">Learn More</a>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="service-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3>Video Animation</h3>
-                    <p>Engaging video animations that tell your brand story and captivate your audience across all platforms.</p>
-                    <a href="#pricing" class="btn">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Our Featured Works</h2>
-                <p>Test how we resolve challenges to fulfill challenge requirements that deliver a greater level of functionality compared to traditional websites.</p>
-            </div>
-            <div class="portfolio-tabs" data-aos="fade-up">
-                <button class="tab-btn active" data-tab="all">All</button>
-                <button class="tab-btn" data-tab="web">Web Design</button>
-                <button class="tab-btn" data-tab="ecom">E-Commerce</button>
-                <button class="tab-btn" data-tab="mobile">Mobile App</button>
-                <button class="tab-btn" data-tab="branding">Branding</button>
-            </div>
-            <div class="portfolio-grid" id="portfolioGrid">
-                <!-- Portfolio items will be dynamically loaded here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Our Packaged Solutions</h2>
-                <p>Eweb design agency can assist visualize even the craziest thoughts converting them into elegant designs, top notch stories and attractive brands.</p>
-            </div>
-            <div class="pricing-tabs" data-aos="fade-up">
-                <button class="tab-btn active" data-tab="web-design">Web Design</button>
-                <button class="tab-btn" data-tab="branding">Branding</button>
-                <button class="tab-btn" data-tab="logo">Logo Design</button>
-                <button class="tab-btn" data-tab="ecom">E-Commerce</button>
-                <button class="tab-btn" data-tab="seo">SEO</button>
-                <button class="tab-btn" data-tab="video">Video Animation</button>
-                <button class="tab-btn" data-tab="content">Web Content</button>
-                <button class="tab-btn" data-tab="animated-logo">Animated Logo</button>
-            </div>
-            <div class="pricing-grid" id="pricingGrid">
-                <!-- Pricing cards will be dynamically loaded here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>What Our Clients Say</h2>
-                <p>Don't just take our word for it. Here's what our satisfied clients have to say about our services.</p>
-            </div>
-            <div class="testimonials-slider" data-aos="fade-up">
-                <div class="testimonial">
-                    <p class="testimonial-text">"Eweb design agency transformed our online presence completely. Their team is professional, creative, and delivered beyond our expectations. Highly recommended!"</p>
-                    <div class="testimonial-author">
-                        <img src="https://picsum.photos/seed/person1/60/60.jpg" alt="Client" class="author-image">
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>CEO, TechStart Inc.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-nav">
-                    <span class="testimonial-dot active"></span>
-                    <span class="testimonial-dot"></span>
-                    <span class="testimonial-dot"></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Partners and Associations</h2>
-                <p>We're proud to work with industry leaders and innovative companies.</p>
-            </div>
-            <div class="clients-grid" data-aos="fade-up">
-                <div class="client-logo">
-                    <img src="https://picsum.photos/seed/google/150/60.jpg" alt="Google">
-                </div>
-                <div class="client-logo">
-                    <img src="https://picsum.photos/seed/microsoft/150/60.jpg" alt="Microsoft">
-                </div>
-                <div class="client-logo">
-                    <img src="https://picsum.photos/seed/amazon/150/60.jpg" alt="Amazon">
-                </div>
-                <div class="client-logo">
-                    <img src="https://picsum.photos/seed/apple/150/60.jpg" alt="Apple">
-                </div>
-                <div class="client-logo">
-                    <img src="https://picsum.photos/seed/facebook/150/60.jpg" alt="Facebook">
-                </div>
-                <div class="client-logo">
-                    <img src="https://picsum.photos/seed/adobe/150/60.jpg" alt="Adobe">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Contact Us</h2>
-                <p>Have a project in mind? Let's discuss how we can help bring your ideas to life.</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info" data-aos="fade-right">
-                    <h3>Get In Touch</h3>
-                    <p>We're here to answer any questions you might have about our services. Reach out to us and we'll respond as soon as possible.</p>
-                    <div class="contact-details">
-                        <h4>Contact Information</h4>
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Business Ave, Suite 100, New York, NY 10001</p>
-                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                        <p><i class="fas fa-envelope"></i> info@webappsolution.com</p>
-                    </div>
-                    <div class="contact-details">
-                        <h4>Business Hours</h4>
-                        <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 6:00 PM</p>
-                        <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 4:00 PM</p>
-                        <p><i class="fas fa-clock"></i> Sunday: Closed</p>
-                    </div>
-                </div>
-                <div class="contact-form" data-aos="fade-left">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="contactName">Name</label>
-                            <input type="text" id="contactName" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactEmail">Email</label>
-                            <input type="email" id="contactEmail" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactSubject">Subject</label>
-                            <input type="text" id="contactSubject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactMessage">Message</label>
-                            <textarea id="contactMessage" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-full">Send Message</button>
-                        <div class="spinner" id="contactSpinner"></div>
-                        <div class="success-message" id="contactSuccessMessage">
-                            Thank you! Your message has been sent successfully.
-                        </div>
-                        <div class="error-message" id="contactErrorMessage">
-                            Oops! Something went wrong. Please try again later.
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>About Eweb design agency</h3>
-                    <p>We are a leading web development company providing innovative digital solutions to businesses worldwide. Our team of experts is dedicated to delivering high-quality services that drive results.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Mobile App Development</a></li>
-                        <li><a href="#">E-Commerce Solutions</a></li>
-                        <li><a href="#">UI/UX Design</a></li>
-                        <li><a href="#">SEO Optimization</a></li>
-                        <li><a href="#">Video Animation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Business Ave, Suite 100, New York, NY 10001</p>
-                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                    <p><i class="fas fa-envelope"></i> info@webappsolution.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Eweb design agency. All rights reserved. | <a href="#" style="color: rgba(255, 255, 255, 0.7);">Privacy Policy</a> | <a href="#" style="color: rgba(255, 255, 255, 0.7);">Terms of Service</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Portfolio Data
-        const portfolioData = {
-            all: [
-                { id: 1, category: 'web', title: 'Corporate Website', image: 'https://picsum.photos/seed/web1/400/300.jpg' },
-                { id: 2, category: 'ecom', title: 'E-Commerce Platform', image: 'https://picsum.photos/seed/ecom1/400/300.jpg' },
-                { id: 3, category: 'mobile', title: 'Mobile Banking App', image: 'https://picsum.photos/seed/mobile1/400/300.jpg' },
-                { id: 4, category: 'branding', title: 'Brand Identity Design', image: 'https://picsum.photos/seed/brand1/400/300.jpg' },
-                { id: 5, category: 'web', title: 'Portfolio Website', image: 'https://picsum.photos/seed/web2/400/300.jpg' },
-                { id: 6, category: 'ecom', title: 'Online Store', image: 'https://picsum.photos/seed/ecom2/400/300.jpg' },
-                { id: 7, category: 'mobile', title: 'Fitness App', image: 'https://picsum.photos/seed/mobile2/400/300.jpg' },
-                { id: 8, category: 'branding', title: 'Logo Design', image: 'https://picsum.photos/seed/brand2/400/300.jpg' }
-            ]
-        };
-
-        // Load Portfolio Items
-        function loadPortfolioItems(category = 'all') {
-            const portfolioGrid = document.getElementById('portfolioGrid');
-            portfolioGrid.innerHTML = '';
-            
-            const items = category === 'all' 
-                ? portfolioData.all 
-                : portfolioData.all.filter(item => item.category === category);
-            
-            items.forEach(item => {
-                const portfolioItem = document.createElement('div');
-                portfolioItem.className = 'portfolio-item';
-                portfolioItem.setAttribute('data-aos', 'fade-up');
-                portfolioItem.innerHTML = `
-                    <img src="${item.image}" alt="${item.title}">
-                    <div class="portfolio-overlay">
-                        <h3>${item.title}</h3>
-                        <p>Click to view details</p>
-                    </div>
-                `;
-                portfolioGrid.appendChild(portfolioItem);
-            });
-        }
-
-        // Portfolio Tab Functionality
-        const portfolioTabs = document.querySelectorAll('.portfolio-tabs .tab-btn');
-        portfolioTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                portfolioTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                loadPortfolioItems(tab.getAttribute('data-tab'));
-            });
-        });
-
-        // Pricing Data
-        const pricingData = {
-            'web-design': [
-                {
-                    title: 'Economy Website Package',
-                    price: 249.99,
-                    originalPrice: 499.98,
-                    features: [
-                        '3 Page HTML Website',
-                        '3 Stock Photos',
-                        '1 Banner Design',
-                        'Contact Form',
-                        'W3C Certified HTML',
-                        'Complete Deployment',
-                        '48-72 Hours Turnaround Time'
-                    ],
-                    featured: false
-                },
-                {
-                    title: 'Professional Website Package',
-                    price: 999.99,
-                    originalPrice: 1999.98,
-                    features: [
-                        '7-8 Unique Page Website',
-                        'Content Management System (CMS) Integration',
-                        'Mobile Responsive Design',
-                        'Interactive jQuery Slider Banner',
-                        '8 Stock Photos',
-                        '5 Banner Designs',
-                        'Contact/Query Form',
-                        '1 Landing Page Design'
-                    ],
-                    featured: true
-                },
-                {
-                    title: 'Enterprise Website Package',
-                    price: 3399.99,
-                    originalPrice: 6799.98,
-                    features: [
-                        '15-20 Unique Page Website',
-                        'Custom Made, Interactive, Dynamic & User Friendly Design',
-                        'High End UI|UX',
-                        'Custom Coding & Development',
-                        'Custom CMS Integration',
-                        'Mobile Responsive Design',
-                        'Striking Hover Effects',
-                        'Interactive jQuery Slider Banner'
-                    ],
-                    featured: false
-                }
-            ],
-            'branding': [
-                {
-                    title: 'Startup Collateral Package',
-                    price: 99.99,
-                    originalPrice: 199.98,
-                    features: [
-                        '2 Stationery Design Set',
-                        'FREE Fax Template',
-                        'Print Ready Formats',
-                        'UNLIMITED Revisions',
-                        '100% Satisfaction Guarantee'
-                    ],
-                    featured: false
-                },
-                {
-                    title: 'Premium Collateral Package',
-                    price: 400.99,
-                    originalPrice: 801.98,
-                    features: [
-                        '2 Stationery Design Set',
-                        'Packaging Design',
-                        'UNLIMITED Revisions',
-                        'T-Shirt Design',
-                        '100% Satisfaction Guarantee'
-                    ],
-                    featured: true
-                },
-                {
-                    title: 'Unlimited Collateral Package',
-                    price: 499.99,
-                    originalPrice: 1099.98,
-                    features: [
-                        '2 Stationery Design Set',
-                        'Menu Card Design',
-                        'T-Shirt Design',
-                        '1 Banner Design',
-                        '100% Satisfaction Guarantee'
-                    ],
-                    featured: false
-                }
-            ],
-            'logo': [
-                {
-                    title: 'Smart Logo Package',
-                    price: 39.99,
-                    originalPrice: 79.98,
-                    features: [
-                        '2 Custom Logo Design Concepts',
-                        '1 Dedicated Designer',
-                        'UNLIMITED Revisions',
-                        '48 to 72 hours TAT',
-                        '100% Unique Design Guarantee'
-                    ],
-                    featured: false
-                },
-                {
-                    title: 'Advanced Logo Package',
-                    price: 149.99,
-                    originalPrice: 299.98,
-                    features: [
-                        '12 Logo Concepts',
-                        'UNLIMITED Revisions',
-                        'FREE Icon Design',
-                        'FREE Grayscale Format',
-                        'FREE Color Options',
-                        'FREE File Formats (PSD, PDF, AI, JPEG, PNG)'
-                    ],
-                    featured: true
-                },
-                {
-                    title: 'Corporate Logo Package',
-                    price: 299.99,
-                    originalPrice: 599.98,
-                    features: [
-                        'Unlimited Logo Concepts',
-                        '8 Dedicated Designers',
-                        'UNLIMITED Revisions',
-                        'FREE Custom Stationery Design',
-                        'Double Sided Brochure OR Flyer Design',
-                        'Social Media Banner Designs'
-                    ],
-                    featured: false
-                }
-            ],
-            'ecom': [
-                {
-                    title: 'Economy E-commerce Package',
-                    price: 899.99,
-                    originalPrice: 1799.98,
-                    features: [
-                        'Conceptual and Dynamic Interface',
-                        'Content Management System (CMS)',
-                        'Mobile Responsive',
-                        'Easy Product Search',
-                        'Up To 100 Products',
-                        'Up To 7 Categories',
-                        'Shopping Cart Integration'
-                    ],
-                    featured: false
-                },
-                {
-                    title: 'Elite E-commerce Package',
-                    price: 3699.99,
-                    originalPrice: 7399.98,
-                    features: [
-                        'UNLIMITED Logo Design Concepts',
-                        'By 6 Award Winning Designers',
-                        'Icon Design',
-                        'UNLIMITED Revisions',
-                        'E-Commerce Store Design',
-                        'Product Detail Page Design',
-                        'Unique Banner Slider'
-                    ],
-                    featured: true
-                },
-                {
-                    title: 'Corporate E-commerce Package',
-                    price: 7999.99,
-                    originalPrice: 15999.98,
-                    features: [
-                        'Custom Content Management System (CMS)',
-                        'Unique Pages and UI Design',
-                        'Complete Custom Development',
-                        'Process Automation Tools',
-                        'Newsfeed Integration',
-                        'Social Media Plugins Integration',
-                        'Upto 40 Stock images'
-                    ],
-                    featured: false
-                }
-            ],
-            'seo': [
-                {
-                    title: 'Startup Plan Package',
-                    price: 499.99,
-                    originalPrice: 999.98,
-                    features: [
-                        'Website Audit',
-                        'Pages Optimized (10 pages)',
-                        '15 Selected Keywords Targeting',
-                        'Keyword Research',
-                        'Keyword Grouping',
-                        'Keyword Mapping',
-                        'SEO Road Map'
-                    ],
-                    featured: false
-                },
-                {
-                    title: 'Venture Plan Package',
-                    price: 1200.99,
-                    originalPrice: 2401.98,
-                    features: [
-                        'Business Analysis',
-                        'Consumer Analysis',
-                        'Competitor Analysis',
-                        '60+ Selected Keywords Targeting',
-                        '30 Pages Keyword Targeted',
-                        'Meta Tags Creation',
-                        'Keyword Optimization'
-                    ],
-                    featured: true
-                },
-                {
-                    title: 'Enterprise Plan Package',
-                    price: 2499.99,
-                    originalPrice: 4999.98,
-                    features: [
-                        'Comprehensive Website Audit',
-                        'Pages Optimized (50+ pages)',
-                        '100+ Selected Keywords Targeting',
-                        'Advanced Keyword Research',
-                        'Competitor Analysis',
-                        'Content Strategy Development',
-                        'Technical SEO Implementation'
-                    ],
-                    featured: false
-                }
-            ],
-            'video': [
-                {
-                    title: 'Teaser/Intro Video Package',
-                    price: 249.99,
-                    originalPrice: 499.98,
-                    features: [
-                        '15s Duration - HD 1080',
-                        'Professional Script',
-                        'Storyboard',
-                        'Sample Themes',
-                        'Custom Setting, Characters & Graphics',
-                        'Animation Effects & Visualization'
-                    ],
-                    featured: false
-                },
-                {
-                    title: 'Classic Video Package',
-                    price: 899.99,
-                    originalPrice: 1799.98,
-                    features: [
-                        '60 Second Video - HD 1080',
-                        'Professional Script',
-                        'Sample Theme',
-                        'Storyboard',
-                        'Animation',
-                        'Voice - Over & Sound Effects'
-                    ],
-                    featured: true
-                },
-                {
-                    title: 'Premium 3D Video Package',
-                    price: 2999.99,
-                    originalPrice: 5999.98,
-                    features: [
-                        '60-120s Duration - HD 1080',
-                        '2D-3D Compositing',
-                        'Rotoscoping',
-                        'Motion Blur Mattes',
-                        'Green Screen Extraction',
-                        'Camera Tracking',
-                        'Digital Paint'
-                    ],
-                    featured: false
-                }
-            ],
-            'content': [
-                {
-                    title: 'Web Content Package',
-                    price: 70.99,
-                    originalPrice: 141.98,
-                    features: [
-                        'Creative, Well-Written and 100% Original Content',
-                        'According To Your Exact Requirements',
-                        'FREE Meta details',
-                        'SEO friendly',
-                        'Quick Turnaround Time',
-                        'Unlimited Revisions'
-                    ],
-                    featured: false
-                },
-                {
-                    title: 'Article Writing Package',
-                    price: 149.99,
-                    originalPrice: 299.98,
-                    features: [
-                        '1 Creative, Fresh & Well-Written Article',
-                        'By 1 Professional Copywriter',
-                        'Industry Specified Expert Copywriter',
-                        '400 Words Per Page',
-                        '3 to 5 Business Days Rotation',
-                        '5 Revisions'
-                    ],
-                    featured: true
-                },
-                {
-                    title: 'Web Content Professional Package',
-                    price: 799.99,
-                    originalPrice: 1599.98,
-                    features: [
-                        '10 Pages Professional Copywriting Service',
-                        'Creative & Well-Written by 2 Professional Copywriters',
-                        'Industry Specified Expert Copywriters',
-                        '300 Words Per Page',
-                        'Unlimited Revisions',
-                        '7 to 10 Business Days Rotation'
-                    ],
-                    featured: false
-                }
-            ],
-            'animated-logo': [
-                {
-                    title: '2D Standard Logo Animation',
-                    price: 155.99,
-                    originalPrice: 311.98,
-                    features: [
-                        '3 custom and Unique design',
-                        '2 Unique Animation styles',
-                        'Camera Angles Positioning',
-                        'Lighting/Composing',
-                        '3 Revisions',
-                        'Animation and Effects'
-                    ],
-                    featured: false
-                },
-                {
-                    title: '3D Standard Logo Animation',
-                    price: 245.99,
-                    originalPrice: 491.98,
-                    features: [
-                        '5 custom and Unique design',
-                        '5 Unique Animation styles',
-                        'Camera Angles Positioning',
-                        'Lighting/Composing',
-                        'unlimited Revisions',
-                        'Animation and VFX'
-                    ],
-                    featured: true
-                },
-                {
-                    title: '3D Advance Logo Animation',
-                    price: 299.99,
-                    originalPrice: 599.98,
-                    features: [
-                        'UNLIMITED custom and Unique design',
-                        'UNLIMITED Unique Animation styles',
-                        'Camera Angles Positioning',
-                        'Lighting/Composing',
-                        'unlimited Revisions',
-                        'Animation and VFX'
-                    ],
-                    featured: false
-                }
-            ]
-        };
-
-        // Load Pricing Cards
-        function loadPricingCards(category = 'web-design') {
-            const pricingGrid = document.getElementById('pricingGrid');
-            pricingGrid.innerHTML = '';
-            
-            const plans = pricingData[category] || [];
-            
-            plans.forEach((plan, index) => {
-                const pricingCard = document.createElement('div');
-                pricingCard.className = `pricing-card ${plan.featured ? 'featured' : ''}`;
-                pricingCard.setAttribute('data-aos', 'fade-up');
-                pricingCard.setAttribute('data-aos-delay', index * 100);
-                
-                pricingCard.innerHTML = `
-                    <div class="pricing-header">
-                        <h3>${plan.title}</h3>
-                        <div class="price">
-                            $${plan.price}
-                            <span>/month</span>
-                        </div>
-                        <div class="original-price">$${plan.originalPrice}</div>
-                    </div>
-                    <div class="pricing-body">
-                        <ul class="pricing-features">
-                            ${plan.features.map(feature => `<li><i class="fas fa-check"></i> ${feature}</li>`).join('')}
-                        </ul>
-                        <a href="#contact" class="btn btn-full">Get Started</a>
-                    </div>
-                `;
-                
-                pricingGrid.appendChild(pricingCard);
-            });
-        }
-
-        // Pricing Tab Functionality
-        const pricingTabs = document.querySelectorAll('.pricing-tabs .tab-btn');
-        pricingTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                pricingTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                loadPricingCards(tab.getAttribute('data-tab'));
-            });
-        });
-
-        // Initialize Portfolio and Pricing
-        loadPortfolioItems();
-        loadPricingCards();
-
-        // Form Submission to Google Sheets
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbz-...'; // Replace with your Google Apps Script URL
-        
-        document.getElementById('heroForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const form = this;
-            const spinner = document.getElementById('formSpinner');
-            const successMessage = document.getElementById('successMessage');
-            const errorMessage = document.getElementById('errorMessage');
-            
-            // Show spinner
-            spinner.style.display = 'block';
-            successMessage.style.display = 'none';
-            errorMessage.style.display = 'none';
-            
-            // Collect form data
-            const formData = new FormData(form);
-            
-            // Send data to Google Sheets
-            fetch(scriptURL, { method: 'POST', body: formData })
-                .then(response => {
-                    spinner.style.display = 'none';
-                    if (response.ok) {
-                        successMessage.style.display = 'block';
-                        form.reset();
-                    } else {
-                        throw new Error('Network response was not ok');
-                    }
-                })
-                .catch(error => {
-                    spinner.style.display = 'none';
-                    errorMessage.style.display = 'block';
-                    console.error('Error!', error.message);
-                });
-        });
-
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const form = this;
-            const spinner = document.getElementById('contactSpinner');
-            const successMessage = document.getElementById('contactSuccessMessage');
-            const errorMessage = document.getElementById('contactErrorMessage');
-            
-            // Show spinner
-            spinner.style.display = 'block';
-            successMessage.style.display = 'none';
-            errorMessage.style.display = 'none';
-            
-            // Collect form data
-            const formData = new FormData(form);
-            
-            // Send data to Google Sheets
-            fetch(scriptURL, { method: 'POST', body: formData })
-                .then(response => {
-                    spinner.style.display = 'none';
-                    if (response.ok) {
-                        successMessage.style.display = 'block';
-                        form.reset();
-                    } else {
-                        throw new Error('Network response was not ok');
-                    }
-                })
-                .catch(error => {
-                    spinner.style.display = 'none';
-                    errorMessage.style.display = 'block';
-                    console.error('Error!', error.message);
-                });
-        });
-
-        // Testimonial Slider
-        const testimonialDots = document.querySelectorAll('.testimonial-dot');
-        const testimonials = [
-            {
-                text: "Eweb design agency transformed our online presence completely. Their team is professional, creative, and delivered beyond our expectations. Highly recommended!",
-                author: "Sarah Johnson",
-                position: "CEO, TechStart Inc.",
-                image: "https://picsum.photos/seed/person1/60/60.jpg"
-            },
-            {
-                text: "Working with Eweb design agency was a game-changer for our business. They understood our needs perfectly and delivered a solution that exceeded our goals.",
-                author: "Michael Chen",
-                position: "Marketing Director, Innovate Corp",
-                image: "https://picsum.photos/seed/person2/60/60.jpg"
-            },
-            {
-                text: "The team at Eweb design agency is exceptional. They took our vision and turned it into a stunning reality. Our new website has increased our conversions by 40%!",
-                author: "Emily Rodriguez",
-                position: "Founder, Fashion Forward",
-                image: "https://picsum.photos/seed/person3/60/60.jpg"
-            }
-        ];
-        
-        let currentTestimonial = 0;
-        
-        function updateTestimonial(index) {
-            const testimonial = document.querySelector('.testimonial');
-            testimonial.innerHTML = `
-                <p class="testimonial-text">"${testimonials[index].text}"</p>
-                <div class="testimonial-author">
-                    <img src="${testimonials[index].image}" alt="Client" class="author-image">
-                    <div class="author-info">
-                        <h4>${testimonials[index].author}</h4>
-                        <p>${testimonials[index].position}</p>
-                    </div>
-                </div>
-            `;
-            
-            testimonialDots.forEach((dot, i) => {
-                if (i === index) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        }
-        
-        testimonialDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentTestimonial = index;
-                updateTestimonial(currentTestimonial);
-            });
-        });
-        
-        // Auto-rotate testimonials
-        setInterval(() => {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            updateTestimonial(currentTestimonial);
-        }, 5000);
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.padding = '10px 0';
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.padding = '15px 0';
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-            }
-        });
-    </script>
-</body>
-</html>
+          
+          
+        </head>
+  <body>
+    <div id="root"><div class="min-h-screen bg-white"><header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50"><nav class="px-6 lg:px-8"><div class="flex items-center justify-between h-16"><div class="flex items-center"><h1 class="text-2xl font-bold text-gray-900" style="font-family: Pacifico, serif;">eWeb Design Agency</h1></div><div class="hidden md:block"><div class="ml-10 flex items-baseline space-x-8"><button class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors cursor-pointer whitespace-nowrap">Home</button><button class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors cursor-pointer whitespace-nowrap">Services</button><button class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors cursor-pointer whitespace-nowrap">Packages</button><button class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors cursor-pointer whitespace-nowrap">About</button><button class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors cursor-pointer whitespace-nowrap">Portfolio</button><button class="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 transition-colors cursor-pointer whitespace-nowrap">Get Quote</button></div></div><div class="md:hidden"><button class="text-gray-700 hover:text-teal-600 p-2 cursor-pointer"><i class="ri-menu-line text-xl"></i></button></div></div></nav></header><main><section id="home" class="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(&quot;https://readdy.ai/api/search-image?query=Modern%20digital%20technology%20workspace%20with%20multiple%20computer%20screens%20showing%20web%20development%20code%2C%20software%20interfaces%2C%20and%20digital%20marketing%20analytics%20dashboards%20in%20a%20sleek%20office%20environment%20with%20blue%20and%20teal%20lighting%2C%20professional%20atmosphere%2C%20clean%20minimalist%20design%2C%20high-tech%20ambiance&amp;width=1920&amp;height=1080&amp;seq=hero-bg&amp;orientation=landscape&quot;);"><div class="container mx-auto px-6 lg:px-8 text-center text-white relative z-10"><div class="max-w-4xl mx-auto"><h2 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight">Complete <span class="text-teal-400">IT Solutions</span> for Your Business</h2><p class="text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed">Transform your business with our comprehensive website development, software development, ERP systems, and digital marketing services. We deliver cutting-edge technology solutions that drive growth and success.</p><div class="flex flex-col sm:flex-row gap-4 justify-center items-center"><button class="bg-teal-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-teal-700 transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap">Get Free Consultation</button><button class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 cursor-pointer whitespace-nowrap">View Our Services</button></div><div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"><div class="bg-white/10 backdrop-blur-sm rounded-lg p-6"><div class="text-3xl font-bold text-teal-400 mb-2">500+</div><div class="text-sm text-gray-200">Projects Completed</div></div><div class="bg-white/10 backdrop-blur-sm rounded-lg p-6"><div class="text-3xl font-bold text-teal-400 mb-2">200+</div><div class="text-sm text-gray-200">Happy Clients</div></div><div class="bg-white/10 backdrop-blur-sm rounded-lg p-6"><div class="text-3xl font-bold text-teal-400 mb-2">5+</div><div class="text-sm text-gray-200">Years Experience</div></div><div class="bg-white/10 backdrop-blur-sm rounded-lg p-6"><div class="text-3xl font-bold text-teal-400 mb-2">24/7</div><div class="text-sm text-gray-200">Support Available</div></div></div></div></div><div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"><button class="text-white hover:text-teal-400 transition-colors cursor-pointer"><i class="ri-arrow-down-line text-2xl"></i></button></div></section><section id="services" class="py-20 bg-gray-50"><div class="container mx-auto px-6 lg:px-8"><div class="text-center mb-16"><h3 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Our <span class="text-teal-600">Expert Services</span></h3><p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">We provide comprehensive IT solutions and digital marketing services to help your business thrive in the digital landscape. Our expert team delivers cutting-edge technology solutions tailored to your specific needs.</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-8 group"><div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors duration-300"><i class="ri-code-s-slash-line text-2xl text-teal-600 group-hover:text-white transition-colors duration-300"></i></div><h4 class="text-xl font-bold text-gray-900 mb-4">Website Development</h4><p class="text-gray-600 mb-6 leading-relaxed">Custom responsive websites built with modern technologies. From simple landing pages to complex web applications, we create stunning digital experiences that convert visitors into customers.</p><ul class="space-y-2"><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Responsive Design</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>SEO Optimized</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Fast Loading</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Mobile First</li></ul></div><div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-8 group"><div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors duration-300"><i class="ri-computer-line text-2xl text-teal-600 group-hover:text-white transition-colors duration-300"></i></div><h4 class="text-xl font-bold text-gray-900 mb-4">Software Development</h4><p class="text-gray-600 mb-6 leading-relaxed">Tailored software solutions for your unique business needs. We develop scalable applications that streamline operations and boost productivity across all platforms.</p><ul class="space-y-2"><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Custom Applications</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Cross-Platform</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Scalable Architecture</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>API Integration</li></ul></div><div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-8 group"><div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors duration-300"><i class="ri-database-2-line text-2xl text-teal-600 group-hover:text-white transition-colors duration-300"></i></div><h4 class="text-xl font-bold text-gray-900 mb-4">Complete ERP Systems</h4><p class="text-gray-600 mb-6 leading-relaxed">Comprehensive Enterprise Resource Planning systems that integrate all your business processes. Manage inventory, finance, HR, and operations from one powerful platform.</p><ul class="space-y-2"><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Inventory Management</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Financial Tracking</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>HR Management</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Real-time Analytics</li></ul></div><div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-8 group"><div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors duration-300"><i class="ri-share-line text-2xl text-teal-600 group-hover:text-white transition-colors duration-300"></i></div><h4 class="text-xl font-bold text-gray-900 mb-4">Social Media Marketing</h4><p class="text-gray-600 mb-6 leading-relaxed">Strategic social media campaigns that build brand awareness and drive engagement. We create compelling content and manage your social presence across all platforms.</p><ul class="space-y-2"><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Content Creation</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Campaign Management</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Analytics &amp; Reporting</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Community Building</li></ul></div><div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-8 group"><div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors duration-300"><i class="ri-search-line text-2xl text-teal-600 group-hover:text-white transition-colors duration-300"></i></div><h4 class="text-xl font-bold text-gray-900 mb-4">SEO Services</h4><p class="text-gray-600 mb-6 leading-relaxed">Advanced search engine optimization strategies that improve your website visibility and drive organic traffic. Get found by customers searching for your services.</p><ul class="space-y-2"><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Keyword Research</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>On-Page SEO</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Technical SEO</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Link Building</li></ul></div><div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-8 group"><div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors duration-300"><i class="ri-smartphone-line text-2xl text-teal-600 group-hover:text-white transition-colors duration-300"></i></div><h4 class="text-xl font-bold text-gray-900 mb-4">ASO Services</h4><p class="text-gray-600 mb-6 leading-relaxed">App Store Optimization services that increase your mobile app visibility and downloads. Optimize your app listing for maximum discoverability and conversion.</p><ul class="space-y-2"><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>App Store Optimization</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Keyword Optimization</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Review Management</li><li class="flex items-center text-sm text-gray-600"><i class="ri-check-line text-teal-600 mr-2"></i>Conversion Rate Optimization</li></ul></div></div></div></section><section id="packages" class="py-20 bg-white"><div class="container mx-auto px-6 lg:px-8"><div class="text-center mb-16"><h3 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Complete <span class="text-teal-600">IT Solutions Packages</span></h3><p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Choose the perfect package for your business needs. Our comprehensive IT solutions packages include website development, software development, ERP systems, and digital marketing services all in one.</p></div><div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"><div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 "><div class="p-8"><div class="text-center mb-8"><h4 class="text-2xl font-bold text-gray-900 mb-2">Starter Package</h4><div class="text-4xl font-bold text-teal-600 mb-2">$2,999</div><div class="text-gray-500 text-sm mb-4">One-time</div><p class="text-gray-600 leading-relaxed">Perfect for small businesses and startups looking to establish their digital presence</p></div><ul class="space-y-4 mb-8"><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Responsive Website (5 pages)</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Basic SEO Setup</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Social Media Setup (3 platforms)</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Contact Form Integration</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Google Analytics Setup</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">3 Months Support</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Mobile Optimization</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">SSL Certificate</span></li></ul><button class="w-full py-4 px-6 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap bg-gray-100 text-gray-900 hover:bg-gray-200">Get Started</button></div></div><div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ring-2 ring-teal-600 scale-105"><div class="absolute -top-4 left-1/2 transform -translate-x-1/2"><span class="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-semibold">Most Popular</span></div><div class="p-8"><div class="text-center mb-8"><h4 class="text-2xl font-bold text-gray-900 mb-2">Professional Package</h4><div class="text-4xl font-bold text-teal-600 mb-2">$7,999</div><div class="text-gray-500 text-sm mb-4">One-time</div><p class="text-gray-600 leading-relaxed">Comprehensive solution for growing businesses with advanced features and marketing</p></div><ul class="space-y-4 mb-8"><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Custom Website (10 pages)</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Advanced SEO (6 months)</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Social Media Marketing (6 months)</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Basic ERP System</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">E-commerce Integration</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Content Management System</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">6 Months Support</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Performance Optimization</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Security Features</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Analytics Dashboard</span></li></ul><button class="w-full py-4 px-6 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap bg-teal-600 text-white hover:bg-teal-700">Get Started</button></div></div><div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 "><div class="p-8"><div class="text-center mb-8"><h4 class="text-2xl font-bold text-gray-900 mb-2">Enterprise Package</h4><div class="text-4xl font-bold text-teal-600 mb-2">$19,999</div><div class="text-gray-500 text-sm mb-4">One-time</div><p class="text-gray-600 leading-relaxed">Complete IT transformation for large businesses with custom software and full ERP</p></div><ul class="space-y-4 mb-8"><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Custom Software Development</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Complete ERP System</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Advanced Website (Unlimited pages)</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Full SEO &amp; ASO Services (12 months)</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Comprehensive Social Media Strategy</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Mobile App Development</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Cloud Integration</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">12 Months Premium Support</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Staff Training</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Custom Integrations</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Advanced Analytics</span></li><li class="flex items-start"><i class="ri-check-line text-teal-600 mr-3 mt-1 flex-shrink-0"></i><span class="text-gray-700">Security Audit</span></li></ul><button class="w-full py-4 px-6 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap bg-gray-100 text-gray-900 hover:bg-gray-200">Get Started</button></div></div></div><div class="text-center mt-12"><p class="text-gray-600 mb-6">Need a custom solution? We create tailored packages for unique business requirements.</p><button class="bg-teal-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors cursor-pointer whitespace-nowrap">Request Custom Quote</button></div></div></section><section id="about" class="py-20 bg-gray-50"><div class="container mx-auto px-6 lg:px-8"><div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20"><div><h3 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">About <span class="text-teal-600">eWeb Design Agency</span></h3><p class="text-xl text-gray-600 mb-6 leading-relaxed">We are a leading IT solutions company specializing in comprehensive digital transformation services. Our expert team combines technical excellence with creative innovation to deliver solutions that drive business success.</p><p class="text-lg text-gray-600 mb-8 leading-relaxed">From website development and custom software solutions to complete ERP systems and digital marketing strategies, we provide end-to-end IT services that help businesses thrive in the digital age. Our commitment to quality, innovation, and customer satisfaction has made us a trusted partner for companies worldwide.</p><div class="flex flex-wrap gap-4"><div class="flex items-center bg-white rounded-lg px-4 py-2 shadow-sm"><i class="ri-award-line text-teal-600 mr-2"></i><span class="text-gray-700 font-medium">ISO Certified</span></div><div class="flex items-center bg-white rounded-lg px-4 py-2 shadow-sm"><i class="ri-shield-check-line text-teal-600 mr-2"></i><span class="text-gray-700 font-medium">Secure Development</span></div><div class="flex items-center bg-white rounded-lg px-4 py-2 shadow-sm"><i class="ri-global-line text-teal-600 mr-2"></i><span class="text-gray-700 font-medium">Global Reach</span></div></div></div><div class="relative"><img alt="eWeb Design Agency Team" class="rounded-2xl shadow-2xl object-cover w-full h-96" src="https://readdy.ai/api/search-image?query=Professional%20diverse%20team%20of%20software%20developers%20and%20digital%20marketing%20experts%20working%20together%20in%20a%20modern%20office%20environment%2C%20collaborative%20workspace%20with%20multiple%20monitors%20showing%20code%20and%20analytics%2C%20bright%20natural%20lighting%2C%20contemporary%20office%20design%2C%20teamwork%20and%20innovation%20atmosphere&amp;width=600&amp;height=400&amp;seq=about-team&amp;orientation=landscape"><div class="absolute -bottom-6 -left-6 bg-teal-600 text-white p-6 rounded-xl shadow-lg"><div class="text-2xl font-bold">5+ Years</div><div class="text-sm">of Excellence</div></div></div></div><div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"><div class="text-center bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"><div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="ri-trophy-line text-teal-600 text-xl"></i></div><div class="text-3xl font-bold text-gray-900 mb-2">500+</div><div class="text-gray-600 text-sm">Projects Delivered</div></div><div class="text-center bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"><div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="ri-user-heart-line text-teal-600 text-xl"></i></div><div class="text-3xl font-bold text-gray-900 mb-2">200+</div><div class="text-gray-600 text-sm">Happy Clients</div></div><div class="text-center bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"><div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="ri-time-line text-teal-600 text-xl"></i></div><div class="text-3xl font-bold text-gray-900 mb-2">5+</div><div class="text-gray-600 text-sm">Years Experience</div></div><div class="text-center bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"><div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="ri-team-line text-teal-600 text-xl"></i></div><div class="text-3xl font-bold text-gray-900 mb-2">50+</div><div class="text-gray-600 text-sm">Team Members</div></div></div><div><h4 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Core Values</h4><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><div class="text-center bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"><div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="ri-lightbulb-line text-teal-600 text-2xl"></i></div><h5 class="text-xl font-bold text-gray-900 mb-3">Innovation</h5><p class="text-gray-600 leading-relaxed">We stay ahead of technology trends to deliver cutting-edge solutions that give your business a competitive advantage.</p></div><div class="text-center bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"><div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="ri-shield-check-line text-teal-600 text-2xl"></i></div><h5 class="text-xl font-bold text-gray-900 mb-3">Quality</h5><p class="text-gray-600 leading-relaxed">Every project undergoes rigorous testing and quality assurance to ensure exceptional performance and reliability.</p></div><div class="text-center bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"><div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="ri-customer-service-2-line text-teal-600 text-2xl"></i></div><h5 class="text-xl font-bold text-gray-900 mb-3">Support</h5><p class="text-gray-600 leading-relaxed">24/7 dedicated support team ensures your systems run smoothly and your business never stops growing.</p></div><div class="text-center bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"><div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="ri-rocket-line text-teal-600 text-2xl"></i></div><h5 class="text-xl font-bold text-gray-900 mb-3">Results</h5><p class="text-gray-600 leading-relaxed">We focus on delivering measurable results that drive business growth and maximize your return on investment.</p></div></div></div></div></section><section id="portfolio" class="py-20 bg-white"><div class="container mx-auto px-6 lg:px-8"><div class="text-center mb-16"><h3 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Our <span class="text-teal-600">Success Stories</span></h3><p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Explore our portfolio of successful projects across various industries. From custom software development to comprehensive digital marketing campaigns, see how we've helped businesses achieve their goals.</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"><div class="relative overflow-hidden"><img alt="E-commerce Platform" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" src="https://readdy.ai/api/search-image?query=Modern%20e-commerce%20website%20interface%20showing%20product%20catalog%2C%20shopping%20cart%2C%20and%20checkout%20process%20on%20multiple%20devices%2C%20clean%20design%20with%20professional%20layout%2C%20blue%20and%20white%20color%20scheme%2C%20user-friendly%20interface&amp;width=400&amp;height=300&amp;seq=portfolio-1&amp;orientation=landscape"><div class="absolute top-4 left-4"><span class="bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Website Development</span></div></div><div class="p-6"><h4 class="text-xl font-bold text-gray-900 mb-3">E-commerce Platform</h4><p class="text-gray-600 mb-4 leading-relaxed">Complete e-commerce solution with inventory management, payment processing, and customer analytics.</p><div class="mb-4"><div class="flex flex-wrap gap-2"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">React</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Node.js</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">MongoDB</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Stripe</span></div></div><div class="border-t pt-4"><div class="flex items-center text-teal-600 font-semibold"><i class="ri-trophy-line mr-2"></i><span class="text-sm">300% increase in online sales</span></div></div></div></div><div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"><div class="relative overflow-hidden"><img alt="Manufacturing ERP System" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" src="https://readdy.ai/api/search-image?query=Professional%20ERP%20system%20dashboard%20interface%20showing%20manufacturing%20analytics%2C%20inventory%20management%20charts%2C%20production%20schedules%2C%20and%20financial%20reports%2C%20modern%20business%20software%20design%2C%20clean%20layout%20with%20data%20visualization&amp;width=400&amp;height=300&amp;seq=portfolio-2&amp;orientation=landscape"><div class="absolute top-4 left-4"><span class="bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-semibold">ERP Development</span></div></div><div class="p-6"><h4 class="text-xl font-bold text-gray-900 mb-3">Manufacturing ERP System</h4><p class="text-gray-600 mb-4 leading-relaxed">Comprehensive ERP system for manufacturing company with inventory, production, and financial modules.</p><div class="mb-4"><div class="flex flex-wrap gap-2"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Python</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Django</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">PostgreSQL</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">React</span></div></div><div class="border-t pt-4"><div class="flex items-center text-teal-600 font-semibold"><i class="ri-trophy-line mr-2"></i><span class="text-sm">50% reduction in operational costs</span></div></div></div></div><div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"><div class="relative overflow-hidden"><img alt="Healthcare Management App" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" src="https://readdy.ai/api/search-image?query=Healthcare%20management%20application%20interface%20showing%20patient%20records%2C%20appointment%20scheduling%2C%20medical%20charts%2C%20and%20doctor%20dashboard%2C%20professional%20medical%20software%20design%2C%20clean%20and%20intuitive%20layout&amp;width=400&amp;height=300&amp;seq=portfolio-3&amp;orientation=landscape"><div class="absolute top-4 left-4"><span class="bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Software Development</span></div></div><div class="p-6"><h4 class="text-xl font-bold text-gray-900 mb-3">Healthcare Management App</h4><p class="text-gray-600 mb-4 leading-relaxed">Mobile and web application for healthcare providers with patient management and appointment scheduling.</p><div class="mb-4"><div class="flex flex-wrap gap-2"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">React Native</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Firebase</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Node.js</span></div></div><div class="border-t pt-4"><div class="flex items-center text-teal-600 font-semibold"><i class="ri-trophy-line mr-2"></i><span class="text-sm">80% improvement in patient satisfaction</span></div></div></div></div><div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"><div class="relative overflow-hidden"><img alt="Digital Marketing Campaign" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" src="https://readdy.ai/api/search-image?query=Digital%20marketing%20analytics%20dashboard%20showing%20SEO%20rankings%2C%20social%20media%20engagement%20metrics%2C%20website%20traffic%20graphs%2C%20and%20conversion%20rates%2C%20professional%20marketing%20analytics%20interface%2C%20colorful%20charts%20and%20data%20visualization&amp;width=400&amp;height=300&amp;seq=portfolio-4&amp;orientation=landscape"><div class="absolute top-4 left-4"><span class="bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-semibold">SEO &amp; Marketing</span></div></div><div class="p-6"><h4 class="text-xl font-bold text-gray-900 mb-3">Digital Marketing Campaign</h4><p class="text-gray-600 mb-4 leading-relaxed">Complete digital marketing strategy including SEO, social media, and content marketing for tech startup.</p><div class="mb-4"><div class="flex flex-wrap gap-2"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Google Analytics</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">SEMrush</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Social Media APIs</span></div></div><div class="border-t pt-4"><div class="flex items-center text-teal-600 font-semibold"><i class="ri-trophy-line mr-2"></i><span class="text-sm">400% increase in organic traffic</span></div></div></div></div><div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"><div class="relative overflow-hidden"><img alt="Restaurant Management System" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" src="https://readdy.ai/api/search-image?query=Restaurant%20point%20of%20sale%20system%20interface%20showing%20menu%20items%2C%20order%20management%2C%20payment%20processing%2C%20and%20inventory%20tracking%2C%20modern%20POS%20software%20design%2C%20user-friendly%20restaurant%20management%20dashboard&amp;width=400&amp;height=300&amp;seq=portfolio-5&amp;orientation=landscape"><div class="absolute top-4 left-4"><span class="bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Custom Software</span></div></div><div class="p-6"><h4 class="text-xl font-bold text-gray-900 mb-3">Restaurant Management System</h4><p class="text-gray-600 mb-4 leading-relaxed">Point of sale system with inventory management, staff scheduling, and customer loyalty programs.</p><div class="mb-4"><div class="flex flex-wrap gap-2"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Vue.js</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Laravel</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">MySQL</span></div></div><div class="border-t pt-4"><div class="flex items-center text-teal-600 font-semibold"><i class="ri-trophy-line mr-2"></i><span class="text-sm">60% faster order processing</span></div></div></div></div><div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"><div class="relative overflow-hidden"><img alt="Real Estate Platform" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" src="https://readdy.ai/api/search-image?query=Real%20estate%20website%20platform%20showing%20property%20listings%2C%20search%20filters%2C%20virtual%20tour%20interface%2C%20and%20agent%20profiles%2C%20modern%20real%20estate%20web%20design%2C%20professional%20layout%20with%20property%20images&amp;width=400&amp;height=300&amp;seq=portfolio-6&amp;orientation=landscape"><div class="absolute top-4 left-4"><span class="bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-semibold">Web Application</span></div></div><div class="p-6"><h4 class="text-xl font-bold text-gray-900 mb-3">Real Estate Platform</h4><p class="text-gray-600 mb-4 leading-relaxed">Property listing platform with advanced search, virtual tours, and agent management system.</p><div class="mb-4"><div class="flex flex-wrap gap-2"><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Angular</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Express.js</span><span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">MongoDB</span></div></div><div class="border-t pt-4"><div class="flex items-center text-teal-600 font-semibold"><i class="ri-trophy-line mr-2"></i><span class="text-sm">250% increase in property inquiries</span></div></div></div></div></div><div class="text-center mt-12"><button class="bg-teal-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors cursor-pointer whitespace-nowrap">Start Your Project</button></div></div></section><section class="py-20 bg-gray-50"><div class="container mx-auto px-6 lg:px-8"><div class="text-center mb-16"><h3 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">What Our <span class="text-teal-600">Clients Say</span></h3><p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Don't just take our word for it. Here's what our satisfied clients have to say about our IT solutions and digital marketing services.</p></div><div class="max-w-4xl mx-auto"><div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 relative"><div class="text-center mb-8"><div class="flex justify-center mb-4"><i class="ri-star-fill text-yellow-400 text-xl mx-1"></i><i class="ri-star-fill text-yellow-400 text-xl mx-1"></i><i class="ri-star-fill text-yellow-400 text-xl mx-1"></i><i class="ri-star-fill text-yellow-400 text-xl mx-1"></i><i class="ri-star-fill text-yellow-400 text-xl mx-1"></i></div><blockquote class="text-xl lg:text-2xl text-gray-700 leading-relaxed mb-8 italic">"eWeb Design Agency transformed our business with their comprehensive ERP system and digital marketing strategy. Our operational efficiency increased by 60% and online sales grew by 300%. Their team is professional, responsive, and truly understands business needs."</blockquote></div><div class="flex items-center justify-center"><img alt="Sarah Johnson" class="w-16 h-16 rounded-full object-cover mr-4" src="https://readdy.ai/api/search-image?query=Professional%20businesswoman%20CEO%20in%20modern%20office%20setting%2C%20confident%20smile%2C%20business%20attire%2C%20corporate%20headshot%20style%2C%20professional%20lighting%2C%20contemporary%20background&amp;width=100&amp;height=100&amp;seq=testimonial-1&amp;orientation=squarish"><div class="text-left"><div class="font-bold text-gray-900 text-lg">Sarah Johnson</div><div class="text-gray-600">CEO, TechStart Solutions</div><div class="text-teal-600 font-medium">TechStart Solutions</div></div></div><div class="flex justify-center items-center mt-8 space-x-4"><button class="w-12 h-12 bg-teal-600 text-white rounded-full flex items-center justify-center hover:bg-teal-700 transition-colors cursor-pointer"><i class="ri-arrow-left-line"></i></button><div class="flex space-x-2"><button class="w-3 h-3 rounded-full transition-colors cursor-pointer bg-teal-600"></button><button class="w-3 h-3 rounded-full transition-colors cursor-pointer bg-gray-300"></button><button class="w-3 h-3 rounded-full transition-colors cursor-pointer bg-gray-300"></button><button class="w-3 h-3 rounded-full transition-colors cursor-pointer bg-gray-300"></button><button class="w-3 h-3 rounded-full transition-colors cursor-pointer bg-gray-300"></button></div><button class="w-12 h-12 bg-teal-600 text-white rounded-full flex items-center justify-center hover:bg-teal-700 transition-colors cursor-pointer"><i class="ri-arrow-right-line"></i></button></div></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"><div class="text-center bg-white rounded-xl p-6 shadow-lg"><div class="text-3xl font-bold text-teal-600 mb-2">98%</div><div class="text-gray-600">Client Satisfaction Rate</div></div><div class="text-center bg-white rounded-xl p-6 shadow-lg"><div class="text-3xl font-bold text-teal-600 mb-2">95%</div><div class="text-gray-600">Project Success Rate</div></div><div class="text-center bg-white rounded-xl p-6 shadow-lg"><div class="text-3xl font-bold text-teal-600 mb-2">24/7</div><div class="text-gray-600">Support Availability</div></div></div></div></section><section class="py-20 bg-white"><div class="container mx-auto px-6 lg:px-8"><div class="text-center mb-16"><h3 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Frequently Asked <span class="text-teal-600">Questions</span></h3><p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Get answers to common questions about our IT solutions, development process, and services. Can't find what you're looking for? Contact us for personalized assistance.</p></div><div class="max-w-4xl mx-auto"><div class="space-y-4"><div class="bg-gray-50 rounded-xl overflow-hidden"><button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors cursor-pointer"><h4 class="text-lg font-semibold text-gray-900 pr-4">What services does eWeb Design Agency offer?</h4><i class="ri-subtract-line text-teal-600 text-xl flex-shrink-0"></i></button><div class="px-6 pb-6"><p class="text-gray-600 leading-relaxed">We offer comprehensive IT solutions including website development, custom software development, complete ERP systems, social media marketing, SEO services, and ASO (App Store Optimization). Our team provides end-to-end digital transformation services for businesses of all sizes.</p></div></div><div class="bg-gray-50 rounded-xl overflow-hidden"><button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors cursor-pointer"><h4 class="text-lg font-semibold text-gray-900 pr-4">How long does it take to complete a website development project?</h4><i class="ri-add-line text-teal-600 text-xl flex-shrink-0"></i></button></div><div class="bg-gray-50 rounded-xl overflow-hidden"><button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors cursor-pointer"><h4 class="text-lg font-semibold text-gray-900 pr-4">Do you provide ongoing support and maintenance?</h4><i class="ri-add-line text-teal-600 text-xl flex-shrink-0"></i></button></div><div class="bg-gray-50 rounded-xl overflow-hidden"><button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors cursor-pointer"><h4 class="text-lg font-semibold text-gray-900 pr-4">Can you integrate the ERP system with existing business tools?</h4><i class="ri-add-line text-teal-600 text-xl flex-shrink-0"></i></button></div><div class="bg-gray-50 rounded-xl overflow-hidden"><button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors cursor-pointer"><h4 class="text-lg font-semibold text-gray-900 pr-4">What makes your SEO services different from others?</h4><i class="ri-add-line text-teal-600 text-xl flex-shrink-0"></i></button></div><div class="bg-gray-50 rounded-xl overflow-hidden"><button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors cursor-pointer"><h4 class="text-lg font-semibold text-gray-900 pr-4">Do you work with businesses in specific industries?</h4><i class="ri-add-line text-teal-600 text-xl flex-shrink-0"></i></button></div><div class="bg-gray-50 rounded-xl overflow-hidden"><button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors cursor-pointer"><h4 class="text-lg font-semibold text-gray-900 pr-4">What is included in your social media marketing services?</h4><i class="ri-add-line text-teal-600 text-xl flex-shrink-0"></i></button></div><div class="bg-gray-50 rounded-xl overflow-hidden"><button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors cursor-pointer"><h4 class="text-lg font-semibold text-gray-900 pr-4">How do you ensure the security of custom software and websites?</h4><i class="ri-add-line text-teal-600 text-xl flex-shrink-0"></i></button></div></div></div><div class="text-center mt-12"><p class="text-gray-600 mb-6">Still have questions? Our team is here to help you find the perfect solution for your business.</p><button class="bg-teal-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors cursor-pointer whitespace-nowrap">Contact Our Experts</button></div></div></section><section id="contact" class="py-20 bg-gray-50"><div class="container mx-auto px-6 lg:px-8"><div class="text-center mb-16"><h3 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Get Your <span class="text-teal-600">Free Consultation</span></h3><p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Ready to transform your business with our comprehensive IT solutions? Contact us today for a free consultation and custom quote tailored to your specific needs.</p></div><div class="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto"><div><h4 class="text-2xl font-bold text-gray-900 mb-6">Why Choose eWeb Design Agency?</h4><div class="space-y-6 mb-8"><div class="flex items-start"><div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0"><i class="ri-check-line text-teal-600 text-xl"></i></div><div><h5 class="font-semibold text-gray-900 mb-2">Complete IT Solutions</h5><p class="text-gray-600">From website development to ERP systems and digital marketing, we provide end-to-end solutions under one roof.</p></div></div><div class="flex items-start"><div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0"><i class="ri-team-line text-teal-600 text-xl"></i></div><div><h5 class="font-semibold text-gray-900 mb-2">Expert Team</h5><p class="text-gray-600">Our experienced developers, designers, and marketing specialists deliver exceptional results for every project.</p></div></div><div class="flex items-start"><div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0"><i class="ri-customer-service-2-line text-teal-600 text-xl"></i></div><div><h5 class="font-semibold text-gray-900 mb-2">24/7 Support</h5><p class="text-gray-600">Round-the-clock support ensures your systems run smoothly and your business never stops growing.</p></div></div><div class="flex items-start"><div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0"><i class="ri-trophy-line text-teal-600 text-xl"></i></div><div><h5 class="font-semibold text-gray-900 mb-2">Proven Results</h5><p class="text-gray-600">500+ successful projects and 200+ satisfied clients across various industries worldwide.</p></div></div></div><div class="bg-white rounded-xl p-6 shadow-lg"><h5 class="font-bold text-gray-900 mb-4">Contact Information</h5><div class="space-y-3"><div class="flex items-center"><i class="ri-phone-line text-teal-600 mr-3"></i><span class="text-gray-700">+1 (555) 123-4567</span></div><div class="flex items-center"><i class="ri-mail-line text-teal-600 mr-3"></i><span class="text-gray-700">info@ewebdesignagency.com</span></div><div class="flex items-center"><i class="ri-time-line text-teal-600 mr-3"></i><span class="text-gray-700">Mon - Fri: 9:00 AM - 6:00 PM</span></div><div class="flex items-center"><i class="ri-global-line text-teal-600 mr-3"></i><span class="text-gray-700">Serving clients worldwide</span></div></div></div></div><div class="bg-white rounded-2xl shadow-xl p-8"><form id="contact_form" data-readdy-form="true"><div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"><div><label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label><input id="name" required="" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm" placeholder="Enter your full name" type="text" value="" name="name"></div><div><label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label><input id="email" required="" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm" placeholder="Enter your email" type="email" value="" name="email"></div></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"><div><label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label><input id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm" placeholder="Enter your phone number" type="tel" value="" name="phone"></div><div><label for="country" class="block text-sm font-medium text-gray-700 mb-2">Country</label><input id="country" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm" placeholder="Enter your country" type="text" value="" name="country"></div></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"><div><label for="package" class="block text-sm font-medium text-gray-700 mb-2">Interested Package</label><div class="relative"><select id="package" name="package" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm appearance-none pr-8"><option value="">Select a package</option><option value="Starter Package">Starter Package ($2,999)</option><option value="Professional Package">Professional Package ($7,999)</option><option value="Enterprise Package">Enterprise Package ($19,999)</option><option value="Custom Solution">Custom Solution</option></select><i class="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i></div></div><div><label for="budget" class="block text-sm font-medium text-gray-700 mb-2">Budget Range</label><div class="relative"><select id="budget" name="budget" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm appearance-none pr-8"><option value="">Select budget range</option><option value="Under $5,000">Under $5,000</option><option value="$5,000 - $10,000">$5,000 - $10,000</option><option value="$10,000 - $25,000">$10,000 - $25,000</option><option value="$25,000 - $50,000">$25,000 - $50,000</option><option value="Over $50,000">Over $50,000</option></select><i class="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i></div></div></div><div class="mb-6"><label for="interested_in" class="block text-sm font-medium text-gray-700 mb-2">Services Interested In</label><div class="relative"><select id="interested_in" name="interested_in" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm appearance-none pr-8"><option value="">Select services</option><option value="Website Development">Website Development</option><option value="Software Development">Software Development</option><option value="ERP Systems">ERP Systems</option><option value="SEO Services">SEO Services</option><option value="Social Media Marketing">Social Media Marketing</option><option value="ASO Services">ASO Services</option><option value="Multiple Services">Multiple Services</option></select><i class="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i></div></div><div class="mb-6"><label for="message" class="block text-sm font-medium text-gray-700 mb-2">Project Details *</label><textarea id="message" name="message" required="" maxlength="500" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm resize-vertical" placeholder="Tell us about your project requirements, goals, and any specific features you need..."></textarea><div class="text-right text-xs text-gray-500 mt-1">0/500 characters</div></div><button type="submit" class="w-full bg-teal-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-teal-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap">Get Free Consultation</button></form></div></div></div></section></main><footer class="bg-gray-900 text-white"><div class="container mx-auto px-6 lg:px-8 py-16"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><div class="lg:col-span-1"><h3 class="text-2xl font-bold mb-4" style="font-family: Pacifico, serif;">eWeb Design Agency</h3><p class="text-gray-300 mb-6 leading-relaxed">Your trusted partner for comprehensive IT solutions. We specialize in website development, software development, ERP systems, and digital marketing services that drive business growth.</p><div class="flex space-x-4"><a href="#" class="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center hover:bg-teal-700 transition-colors"><i class="ri-facebook-fill"></i></a><a href="#" class="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center hover:bg-teal-700 transition-colors"><i class="ri-twitter-fill"></i></a><a href="#" class="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center hover:bg-teal-700 transition-colors"><i class="ri-linkedin-fill"></i></a><a href="#" class="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center hover:bg-teal-700 transition-colors"><i class="ri-instagram-fill"></i></a></div></div><div><h4 class="text-lg font-semibold mb-6">Our Services</h4><ul class="space-y-3"><li><button class="text-gray-300 hover:text-teal-400 transition-colors cursor-pointer">Website Development</button></li><li><button class="text-gray-300 hover:text-teal-400 transition-colors cursor-pointer">Software Development</button></li><li><button class="text-gray-300 hover:text-teal-400 transition-colors cursor-pointer">ERP Systems</button></li><li><button class="text-gray-300 hover:text-teal-400 transition-colors cursor-pointer">SEO Services</button></li><li><button class="text-gray-300 hover:text-teal-400 transition-colors cursor-pointer">Social Media Marketing</button></li><li><button class="text-gray-300 hover:text-teal-400 transition-colors cursor-pointer">ASO Services</button></li></ul></div><div><h4 class="text-lg font-semibold mb-6">Quick Links</h4><ul class="space-y-3"><li><button class="text-gray-300 hover:text-teal-400 transition-colors cursor-pointer">Home</button></li><li><button class="text-gray-300 hover:text-teal-400 transition-colors cursor-pointer">About Us</button></li><li><button class="text-gray-300 hover:text-teal-400 transition-colors cursor-pointer">Packages</button></li><li><button class="text-gray-300 hover:text-teal-400 transition-colors cursor-pointer">Portfolio</button></li><li><button class="text-gray-300 hover:text-teal-400 transition-colors cursor-pointer">Contact</button></li><li><a href="#" class="text-gray-300 hover:text-teal-400 transition-colors">Privacy Policy</a></li></ul></div><div><h4 class="text-lg font-semibold mb-6">Contact Info</h4><ul class="space-y-3"><li class="flex items-center"><i class="ri-phone-line text-teal-400 mr-3"></i><span class="text-gray-300">+1 (555) 123-4567</span></li><li class="flex items-center"><i class="ri-mail-line text-teal-400 mr-3"></i><span class="text-gray-300">info@ewebdesignagency.com</span></li><li class="flex items-center"><i class="ri-time-line text-teal-400 mr-3"></i><span class="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM</span></li><li class="flex items-center"><i class="ri-global-line text-teal-400 mr-3"></i><span class="text-gray-300">Serving Worldwide</span></li></ul><div class="mt-6"><h5 class="font-semibold mb-3">Get Free Consultation</h5><button class="bg-teal-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-700 transition-colors cursor-pointer whitespace-nowrap">Contact Us Now</button></div></div></div><div class="border-t border-gray-800 mt-12 pt-8"><div class="flex flex-col md:flex-row justify-between items-center"><p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 eWeb Design Agency. All rights reserved.</p><div class="flex items-center space-x-6"><a href="#" class="text-gray-400 hover:text-teal-400 text-sm transition-colors">Terms of Service</a><a href="#" class="text-gray-400 hover:text-teal-400 text-sm transition-colors">Privacy Policy</a><a href="https://readdy.ai/?origin=logo" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-teal-400 text-sm transition-colors">Powered by Readdy</a></div></div></div></div></footer></div></div>
+    
+    <!-- Readdy Agent Widget -->
+    
+  
+<vapi-widget assistant-id="4ba732cc-2658-4f3f-82ff-67c6466a86f6" public-key="3f316145-e21e-4681-9bf0-7479538e1e33" src="https://readdy.ai/api/public/assistant/widget?projectId=e1c3742d-3c2b-486b-91d9-3015b5f8c6cd" mode="hybrid" voice-show-transcript="true" theme="light" size="compact" accent-color="#14B8A6" button-base-color="#000000" button-accent-color="#FFFFFF" defer="" cta-title="Talk with Us" title="Talk with Us"><div class="vapi-widget-wrapper"><div style="position: fixed; z-index: 9999; bottom: 1.5rem; right: 1.5rem;"><div id="vapi-widget-floating-button" class="hover:scale-105 hover:-translate-y-1 hover:shadow-xl " style="padding: 0.75rem 1rem; height: 3rem; border-radius: 1rem; background-color: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px; cursor: pointer; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; justify-content: center; position: relative;"><div class="flex items-center space-x-2" style="display: flex; align-items: center; gap: 0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="28" height="28" viewBox="0 0 16 16" class=""><defs><clipPath id="master_svg0_agent_icon_28"><rect x="0" y="0" width="16" height="16" rx="0"></rect></clipPath></defs><g clip-path="url(#master_svg0_agent_icon_28)"><rect x="0" y="0" width="16" height="16" rx="0" fill="transparent" fill-opacity="1"></rect><g><path d="M8.0000605119812,0.4443359375C4.712874911981201,0.4443359375,2.021052311981201,2.9933877375,1.7934282119812013,6.2226562375L1.4900019119812011,6.2226562375C0.9984684019812011,6.2226562375,0.6000018119812012,6.6211233375,0.6000018119812012,7.1126566375L0.6000018119812012,9.2361164375C0.6000018119812012,10.7628059375,1.8376292119812012,12.0004339375,3.364319811981201,12.0004339375C3.8012183119812013,12.0004339375,4.155394811981202,11.6462579375,4.155394811981202,11.2093579375L4.155394811981202,9.7111110375L5.933951811981201,9.7111110375L6.642694911981201,10.5970399375C6.678404311981201,10.6416769375,6.720309211981201,10.6809819375,6.7671385119812015,10.7137619375C7.038608111981201,10.9037909375,7.412726411981201,10.8377699375,7.602755111981201,10.5662999375L8.698806311981201,9.0005121375L9.0871396119812,9.4859285375C9.2010026119812,9.6282577375,9.3733897119812,9.7111110375,9.5556607119812,9.7111110375L11.8400028119812,9.7111110375L11.8400028119812,11.2095789375C11.8400028119812,11.5772799375,12.090941811981201,11.8863709375,12.430910811981201,11.9749369375Q12.397504811981202,12.0501919375,12.361336811981202,12.1227459375Q11.9623638119812,12.9231089375,11.217902811981201,13.4064919375Q10.464771711981202,13.8955039375,9.347753011981201,14.0697159375C9.164969011981201,13.7775529375,8.8446250119812,13.6000979375,8.499995711981201,13.6000979375L7.499995711981201,13.6000979375C6.947711011981201,13.6000979375,6.499995711981201,14.0478129375,6.499995711981201,14.6000979375C6.499995711981201,15.1523819375,6.947711011981201,15.6000979375,7.499995711981201,15.6000979375L8.499995711981201,15.6000979375C8.867357711981201,15.6000979375,9.205142511981201,15.3986739375,9.379777411981202,15.0754769375Q10.789143811981202,14.8771949375,11.7624808119812,14.2452009375Q12.735667811981202,13.6133069375,13.2563028119812,12.5688779375Q13.426279811981201,12.2278969375,13.546219811981201,11.8452929375C14.623171811981202,11.4675219375,15.395394811981202,10.4418907375,15.395394811981202,9.2358961375L15.395394811981202,7.1115455375C15.395394811981202,6.6206255375,14.997426811981201,6.2226562375,14.5065068119812,6.2226562375L14.2066928119812,6.2226562375C13.979067811981201,2.9933877375,11.287245811981201,0.4443359375,8.0000605119812,0.4443359375ZM3.2653947119812012,6.2226562375L3.1256022119812013,6.2226562375Q3.2673826119812013,4.4805894375,4.540736711981201,3.2072351375Q5.973635211981201,1.7743364375,8.0000605119812,1.7743365375Q10.026485011981201,1.7743359375,11.4593848119812,3.2072348375Q12.7327378119812,4.4805898375,12.8745188119812,6.2226562375L12.730002811981201,6.2226562375C12.2384698119812,6.2226562375,11.8400028119812,6.6211233375,11.8400028119812,7.1126566375L11.8400028119812,8.5111112375L9.844035611981202,8.5111112375L9.135293511981201,7.6251831375C9.035886311981201,7.5009231375,8.891187211981201,7.4212427375,8.733030811981202,7.4036703375C8.5748739119812,7.3860969375,8.416214511981202,7.4320712375,8.291955011981202,7.5314788375C8.247317811981201,7.5671882375,8.208013011981201,7.6090927375,8.175232911981201,7.6559229375L7.079181211981201,9.2217102375L6.690847911981201,8.7362938375C6.576983911981201,8.5939655375,6.404596811981201,8.5111112375,6.222326711981201,8.5111112375L4.155394811981202,8.5111112375L4.155394811981202,7.1126566375C4.155394811981202,6.6211233375,3.756928411981201,6.2226562375,3.2653947119812012,6.2226562375ZM1.8000020119812012,9.2361164375Q1.8000020119812012,9.8840780375,2.2581801119812015,10.3422565375Q2.5644011119812014,10.6484779375,2.955394711981201,10.7500369375L2.955394711981201,7.4226565375L1.800002111981201,7.4226565375L1.8000020119812012,9.2361164375ZM13.040002811981202,7.4226565375L13.040002811981202,10.7499879375Q13.430952811981202,10.6483919375,13.737153811981202,10.3421917375Q14.1953948119812,9.8839492375,14.1953948119812,9.2358961375L14.1953948119812,7.4226565375L13.040002811981202,7.4226565375Z" fill-rule="evenodd" fill="#14B8A6" fill-opacity="1"></path></g></g></svg><div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;"><span style="color: rgb(255, 255, 255); font-size: 0.875rem; font-weight: 500; line-height: 1.2;">Talk with Us</span></div></div></div></div></div></vapi-widget></body></html>
