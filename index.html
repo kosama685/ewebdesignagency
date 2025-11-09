@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eweb design agency - Expert Web Development Services</title>
+    <meta name="description" content="Eweb design agency is a leading web design agency in the US, offering custom web design, e-commerce solutions, mobile app development, and more. Transform your digital presence today.">
+    <meta name="keywords" content="web design, web development, e-commerce, mobile app, branding, SEO, video animation">
+    <meta name="author" content="Eweb design agency">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Eweb design agency - Expert Web Development Services">
+    <meta property="og:description" content="Transform your digital presence with our expert web development services. Custom solutions for your business needs.">
+    <meta property="og:image" content="https://www.Ewebdesignagency.com/assets/images/pexels-photo-1181449.png">
+    <meta property="og:url" content="https://www.Ewebdesignagency.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Eweb design agency - Expert Web Development Services">
+    <meta name="twitter:description" content="Transform your digital presence with our expert web development services. Custom solutions for your business needs.">
+    <meta name="twitter:image" content="https://www.Ewebdesignagency.com/assets/images/pexels-photo-1181449.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 150px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://picsum.photos/seed/webapp/1920/1080.jpg') center/cover;
+            opacity: 0.2;
+            z-index: -1;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        
+        .hero-text {
+            flex: 1;
+            color: var(--white);
+        }
+        
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+        
+        .hero-form {
+            flex: 1;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        
+        .hero-form h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-full {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            color: var(--text-dark);
+        }
+        
+        .rating i {
+            color: var(--accent-color);
+            margin-left: 5px;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--white);
+            font-size: 36px;
+        }
+        
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+        
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            padding: 80px 0;
+        }
+        
+        .portfolio-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            margin: 5px;
+            background: var(--white);
+            border: 1px solid #e5e7eb;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .tab-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        
+        .tab-btn:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-overlay h3 {
+            color: var(--white);
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .portfolio-overlay p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .pricing-card.featured {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+        
+        .pricing-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .pricing-card.featured .pricing-header {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+        
+        .pricing-header h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .price span {
+            font-size: 18px;
+            font-weight: 400;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            opacity: 0.7;
+            font-size: 18px;
+        }
+        
+        .pricing-body {
+            padding: 30px;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .pricing-card.featured .pricing-features i {
+            color: var(--accent-color);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+        }
+        
+        .testimonials-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .testimonial-text {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: var(--text-light);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #e5e7eb;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .testimonial-dot.active {
+            background: var(--primary-color);
+        }
+        
+        /* Clients Section */
+        .clients {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+        
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .client-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+        
+        .client-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        .client-logo img {
+            max-width: 100%;
+            max-height: 60px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        
+        .contact-info p {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-details h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+        
+        .contact-details p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+        
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: var(--white);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .footer-column p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-text h1 {
+                font-size: 36px;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 120px 0 60px;
+            }
+            
+            .hero-text h1 {
+                font-size: 28px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .services-grid,
+            .portfolio-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Loading Spinner */
+        .spinner {
+            display: none;
+            width: 40px;
+            height: 40px;
+            margin: 20px auto;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--white);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: #10b981;
+            color: var(--white);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .error-message {
+            display: none;
+            background: #ef4444;
+            color: var(--white);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <i class="fas fa-code"></i>
+                    Eweb design agency
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-right">
+                    <h1>Eweb design agency<sup>&reg;</sup></h1>
+                    <p>As an expert Eweb design agency, we offer a unique and seamless experience for users. We don't just create website design, we create digital stories to make your customers maintain coming back to your website.</p>
+                    <div class="rating">
+                        We are rated 4.5
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        among 700+ satisfied customers.
+                    </div>
+                </div>
+                <div class="hero-form" data-aos="fade-left">
+                    <h3>Get Started Today</h3>
+                    <form id="heroForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required minlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required minlength="10" maxlength="10">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-full">Submit</button>
+                        <div class="spinner" id="formSpinner"></div>
+                        <div class="success-message" id="successMessage">
+                            Thank you! Your message has been sent successfully.
+                        </div>
+                        <div class="error-message" id="errorMessage">
+                            Oops! Something went wrong. Please try again later.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Services</h2>
+                <p>We offer a comprehensive range of digital services to help your business thrive in the online world.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites built with modern technologies to deliver exceptional user experiences and drive business growth.</p>
+                    <a href="#pricing" class="btn">Learn More</a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Native and cross-platform mobile applications that engage users and provide seamless experiences across all devices.</p>
+                    <a href="#pricing" class="btn">Learn More</a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-Commerce Solutions</h3>
+                    <p>Powerful e-commerce platforms that help you sell products online with secure payment processing and inventory management.</p>
+                    <a href="#pricing" class="btn">Learn More</a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Beautiful and intuitive designs that enhance user engagement and create memorable digital experiences.</p>
+                    <a href="#pricing" class="btn">Learn More</a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO Optimization</h3>
+                    <p>Strategic SEO services to improve your search engine rankings and drive organic traffic to your website.</p>
+                    <a href="#pricing" class="btn">Learn More</a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Animation</h3>
+                    <p>Engaging video animations that tell your brand story and captivate your audience across all platforms.</p>
+                    <a href="#pricing" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Featured Works</h2>
+                <p>Test how we resolve challenges to fulfill challenge requirements that deliver a greater level of functionality compared to traditional websites.</p>
+            </div>
+            <div class="portfolio-tabs" data-aos="fade-up">
+                <button class="tab-btn active" data-tab="all">All</button>
+                <button class="tab-btn" data-tab="web">Web Design</button>
+                <button class="tab-btn" data-tab="ecom">E-Commerce</button>
+                <button class="tab-btn" data-tab="mobile">Mobile App</button>
+                <button class="tab-btn" data-tab="branding">Branding</button>
+            </div>
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Portfolio items will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Packaged Solutions</h2>
+                <p>Eweb design agency can assist visualize even the craziest thoughts converting them into elegant designs, top notch stories and attractive brands.</p>
+            </div>
+            <div class="pricing-tabs" data-aos="fade-up">
+                <button class="tab-btn active" data-tab="web-design">Web Design</button>
+                <button class="tab-btn" data-tab="branding">Branding</button>
+                <button class="tab-btn" data-tab="logo">Logo Design</button>
+                <button class="tab-btn" data-tab="ecom">E-Commerce</button>
+                <button class="tab-btn" data-tab="seo">SEO</button>
+                <button class="tab-btn" data-tab="video">Video Animation</button>
+                <button class="tab-btn" data-tab="content">Web Content</button>
+                <button class="tab-btn" data-tab="animated-logo">Animated Logo</button>
+            </div>
+            <div class="pricing-grid" id="pricingGrid">
+                <!-- Pricing cards will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>What Our Clients Say</h2>
+                <p>Don't just take our word for it. Here's what our satisfied clients have to say about our services.</p>
+            </div>
+            <div class="testimonials-slider" data-aos="fade-up">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Eweb design agency transformed our online presence completely. Their team is professional, creative, and delivered beyond our expectations. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://picsum.photos/seed/person1/60/60.jpg" alt="Client" class="author-image">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, TechStart Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <span class="testimonial-dot active"></span>
+                    <span class="testimonial-dot"></span>
+                    <span class="testimonial-dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Partners and Associations</h2>
+                <p>We're proud to work with industry leaders and innovative companies.</p>
+            </div>
+            <div class="clients-grid" data-aos="fade-up">
+                <div class="client-logo">
+                    <img src="https://picsum.photos/seed/google/150/60.jpg" alt="Google">
+                </div>
+                <div class="client-logo">
+                    <img src="https://picsum.photos/seed/microsoft/150/60.jpg" alt="Microsoft">
+                </div>
+                <div class="client-logo">
+                    <img src="https://picsum.photos/seed/amazon/150/60.jpg" alt="Amazon">
+                </div>
+                <div class="client-logo">
+                    <img src="https://picsum.photos/seed/apple/150/60.jpg" alt="Apple">
+                </div>
+                <div class="client-logo">
+                    <img src="https://picsum.photos/seed/facebook/150/60.jpg" alt="Facebook">
+                </div>
+                <div class="client-logo">
+                    <img src="https://picsum.photos/seed/adobe/150/60.jpg" alt="Adobe">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Contact Us</h2>
+                <p>Have a project in mind? Let's discuss how we can help bring your ideas to life.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Get In Touch</h3>
+                    <p>We're here to answer any questions you might have about our services. Reach out to us and we'll respond as soon as possible.</p>
+                    <div class="contact-details">
+                        <h4>Contact Information</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Business Ave, Suite 100, New York, NY 10001</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@webappsolution.com</p>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Business Hours</h4>
+                        <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 4:00 PM</p>
+                        <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Name</label>
+                            <input type="text" id="contactName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-full">Send Message</button>
+                        <div class="spinner" id="contactSpinner"></div>
+                        <div class="success-message" id="contactSuccessMessage">
+                            Thank you! Your message has been sent successfully.
+                        </div>
+                        <div class="error-message" id="contactErrorMessage">
+                            Oops! Something went wrong. Please try again later.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Eweb design agency</h3>
+                    <p>We are a leading web development company providing innovative digital solutions to businesses worldwide. Our team of experts is dedicated to delivering high-quality services that drive results.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Mobile App Development</a></li>
+                        <li><a href="#">E-Commerce Solutions</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                        <li><a href="#">Video Animation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Business Ave, Suite 100, New York, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@webappsolution.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Eweb design agency. All rights reserved. | <a href="#" style="color: rgba(255, 255, 255, 0.7);">Privacy Policy</a> | <a href="#" style="color: rgba(255, 255, 255, 0.7);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Portfolio Data
+        const portfolioData = {
+            all: [
+                { id: 1, category: 'web', title: 'Corporate Website', image: 'https://picsum.photos/seed/web1/400/300.jpg' },
+                { id: 2, category: 'ecom', title: 'E-Commerce Platform', image: 'https://picsum.photos/seed/ecom1/400/300.jpg' },
+                { id: 3, category: 'mobile', title: 'Mobile Banking App', image: 'https://picsum.photos/seed/mobile1/400/300.jpg' },
+                { id: 4, category: 'branding', title: 'Brand Identity Design', image: 'https://picsum.photos/seed/brand1/400/300.jpg' },
+                { id: 5, category: 'web', title: 'Portfolio Website', image: 'https://picsum.photos/seed/web2/400/300.jpg' },
+                { id: 6, category: 'ecom', title: 'Online Store', image: 'https://picsum.photos/seed/ecom2/400/300.jpg' },
+                { id: 7, category: 'mobile', title: 'Fitness App', image: 'https://picsum.photos/seed/mobile2/400/300.jpg' },
+                { id: 8, category: 'branding', title: 'Logo Design', image: 'https://picsum.photos/seed/brand2/400/300.jpg' }
+            ]
+        };
+
+        // Load Portfolio Items
+        function loadPortfolioItems(category = 'all') {
+            const portfolioGrid = document.getElementById('portfolioGrid');
+            portfolioGrid.innerHTML = '';
+            
+            const items = category === 'all' 
+                ? portfolioData.all 
+                : portfolioData.all.filter(item => item.category === category);
+            
+            items.forEach(item => {
+                const portfolioItem = document.createElement('div');
+                portfolioItem.className = 'portfolio-item';
+                portfolioItem.setAttribute('data-aos', 'fade-up');
+                portfolioItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}">
+                    <div class="portfolio-overlay">
+                        <h3>${item.title}</h3>
+                        <p>Click to view details</p>
+                    </div>
+                `;
+                portfolioGrid.appendChild(portfolioItem);
+            });
+        }
+
+        // Portfolio Tab Functionality
+        const portfolioTabs = document.querySelectorAll('.portfolio-tabs .tab-btn');
+        portfolioTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                portfolioTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                loadPortfolioItems(tab.getAttribute('data-tab'));
+            });
+        });
+
+        // Pricing Data
+        const pricingData = {
+            'web-design': [
+                {
+                    title: 'Economy Website Package',
+                    price: 249.99,
+                    originalPrice: 499.98,
+                    features: [
+                        '3 Page HTML Website',
+                        '3 Stock Photos',
+                        '1 Banner Design',
+                        'Contact Form',
+                        'W3C Certified HTML',
+                        'Complete Deployment',
+                        '48-72 Hours Turnaround Time'
+                    ],
+                    featured: false
+                },
+                {
+                    title: 'Professional Website Package',
+                    price: 999.99,
+                    originalPrice: 1999.98,
+                    features: [
+                        '7-8 Unique Page Website',
+                        'Content Management System (CMS) Integration',
+                        'Mobile Responsive Design',
+                        'Interactive jQuery Slider Banner',
+                        '8 Stock Photos',
+                        '5 Banner Designs',
+                        'Contact/Query Form',
+                        '1 Landing Page Design'
+                    ],
+                    featured: true
+                },
+                {
+                    title: 'Enterprise Website Package',
+                    price: 3399.99,
+                    originalPrice: 6799.98,
+                    features: [
+                        '15-20 Unique Page Website',
+                        'Custom Made, Interactive, Dynamic & User Friendly Design',
+                        'High End UI|UX',
+                        'Custom Coding & Development',
+                        'Custom CMS Integration',
+                        'Mobile Responsive Design',
+                        'Striking Hover Effects',
+                        'Interactive jQuery Slider Banner'
+                    ],
+                    featured: false
+                }
+            ],
+            'branding': [
+                {
+                    title: 'Startup Collateral Package',
+                    price: 99.99,
+                    originalPrice: 199.98,
+                    features: [
+                        '2 Stationery Design Set',
+                        'FREE Fax Template',
+                        'Print Ready Formats',
+                        'UNLIMITED Revisions',
+                        '100% Satisfaction Guarantee'
+                    ],
+                    featured: false
+                },
+                {
+                    title: 'Premium Collateral Package',
+                    price: 400.99,
+                    originalPrice: 801.98,
+                    features: [
+                        '2 Stationery Design Set',
+                        'Packaging Design',
+                        'UNLIMITED Revisions',
+                        'T-Shirt Design',
+                        '100% Satisfaction Guarantee'
+                    ],
+                    featured: true
+                },
+                {
+                    title: 'Unlimited Collateral Package',
+                    price: 499.99,
+                    originalPrice: 1099.98,
+                    features: [
+                        '2 Stationery Design Set',
+                        'Menu Card Design',
+                        'T-Shirt Design',
+                        '1 Banner Design',
+                        '100% Satisfaction Guarantee'
+                    ],
+                    featured: false
+                }
+            ],
+            'logo': [
+                {
+                    title: 'Smart Logo Package',
+                    price: 39.99,
+                    originalPrice: 79.98,
+                    features: [
+                        '2 Custom Logo Design Concepts',
+                        '1 Dedicated Designer',
+                        'UNLIMITED Revisions',
+                        '48 to 72 hours TAT',
+                        '100% Unique Design Guarantee'
+                    ],
+                    featured: false
+                },
+                {
+                    title: 'Advanced Logo Package',
+                    price: 149.99,
+                    originalPrice: 299.98,
+                    features: [
+                        '12 Logo Concepts',
+                        'UNLIMITED Revisions',
+                        'FREE Icon Design',
+                        'FREE Grayscale Format',
+                        'FREE Color Options',
+                        'FREE File Formats (PSD, PDF, AI, JPEG, PNG)'
+                    ],
+                    featured: true
+                },
+                {
+                    title: 'Corporate Logo Package',
+                    price: 299.99,
+                    originalPrice: 599.98,
+                    features: [
+                        'Unlimited Logo Concepts',
+                        '8 Dedicated Designers',
+                        'UNLIMITED Revisions',
+                        'FREE Custom Stationery Design',
+                        'Double Sided Brochure OR Flyer Design',
+                        'Social Media Banner Designs'
+                    ],
+                    featured: false
+                }
+            ],
+            'ecom': [
+                {
+                    title: 'Economy E-commerce Package',
+                    price: 899.99,
+                    originalPrice: 1799.98,
+                    features: [
+                        'Conceptual and Dynamic Interface',
+                        'Content Management System (CMS)',
+                        'Mobile Responsive',
+                        'Easy Product Search',
+                        'Up To 100 Products',
+                        'Up To 7 Categories',
+                        'Shopping Cart Integration'
+                    ],
+                    featured: false
+                },
+                {
+                    title: 'Elite E-commerce Package',
+                    price: 3699.99,
+                    originalPrice: 7399.98,
+                    features: [
+                        'UNLIMITED Logo Design Concepts',
+                        'By 6 Award Winning Designers',
+                        'Icon Design',
+                        'UNLIMITED Revisions',
+                        'E-Commerce Store Design',
+                        'Product Detail Page Design',
+                        'Unique Banner Slider'
+                    ],
+                    featured: true
+                },
+                {
+                    title: 'Corporate E-commerce Package',
+                    price: 7999.99,
+                    originalPrice: 15999.98,
+                    features: [
+                        'Custom Content Management System (CMS)',
+                        'Unique Pages and UI Design',
+                        'Complete Custom Development',
+                        'Process Automation Tools',
+                        'Newsfeed Integration',
+                        'Social Media Plugins Integration',
+                        'Upto 40 Stock images'
+                    ],
+                    featured: false
+                }
+            ],
+            'seo': [
+                {
+                    title: 'Startup Plan Package',
+                    price: 499.99,
+                    originalPrice: 999.98,
+                    features: [
+                        'Website Audit',
+                        'Pages Optimized (10 pages)',
+                        '15 Selected Keywords Targeting',
+                        'Keyword Research',
+                        'Keyword Grouping',
+                        'Keyword Mapping',
+                        'SEO Road Map'
+                    ],
+                    featured: false
+                },
+                {
+                    title: 'Venture Plan Package',
+                    price: 1200.99,
+                    originalPrice: 2401.98,
+                    features: [
+                        'Business Analysis',
+                        'Consumer Analysis',
+                        'Competitor Analysis',
+                        '60+ Selected Keywords Targeting',
+                        '30 Pages Keyword Targeted',
+                        'Meta Tags Creation',
+                        'Keyword Optimization'
+                    ],
+                    featured: true
+                },
+                {
+                    title: 'Enterprise Plan Package',
+                    price: 2499.99,
+                    originalPrice: 4999.98,
+                    features: [
+                        'Comprehensive Website Audit',
+                        'Pages Optimized (50+ pages)',
+                        '100+ Selected Keywords Targeting',
+                        'Advanced Keyword Research',
+                        'Competitor Analysis',
+                        'Content Strategy Development',
+                        'Technical SEO Implementation'
+                    ],
+                    featured: false
+                }
+            ],
+            'video': [
+                {
+                    title: 'Teaser/Intro Video Package',
+                    price: 249.99,
+                    originalPrice: 499.98,
+                    features: [
+                        '15s Duration - HD 1080',
+                        'Professional Script',
+                        'Storyboard',
+                        'Sample Themes',
+                        'Custom Setting, Characters & Graphics',
+                        'Animation Effects & Visualization'
+                    ],
+                    featured: false
+                },
+                {
+                    title: 'Classic Video Package',
+                    price: 899.99,
+                    originalPrice: 1799.98,
+                    features: [
+                        '60 Second Video - HD 1080',
+                        'Professional Script',
+                        'Sample Theme',
+                        'Storyboard',
+                        'Animation',
+                        'Voice - Over & Sound Effects'
+                    ],
+                    featured: true
+                },
+                {
+                    title: 'Premium 3D Video Package',
+                    price: 2999.99,
+                    originalPrice: 5999.98,
+                    features: [
+                        '60-120s Duration - HD 1080',
+                        '2D-3D Compositing',
+                        'Rotoscoping',
+                        'Motion Blur Mattes',
+                        'Green Screen Extraction',
+                        'Camera Tracking',
+                        'Digital Paint'
+                    ],
+                    featured: false
+                }
+            ],
+            'content': [
+                {
+                    title: 'Web Content Package',
+                    price: 70.99,
+                    originalPrice: 141.98,
+                    features: [
+                        'Creative, Well-Written and 100% Original Content',
+                        'According To Your Exact Requirements',
+                        'FREE Meta details',
+                        'SEO friendly',
+                        'Quick Turnaround Time',
+                        'Unlimited Revisions'
+                    ],
+                    featured: false
+                },
+                {
+                    title: 'Article Writing Package',
+                    price: 149.99,
+                    originalPrice: 299.98,
+                    features: [
+                        '1 Creative, Fresh & Well-Written Article',
+                        'By 1 Professional Copywriter',
+                        'Industry Specified Expert Copywriter',
+                        '400 Words Per Page',
+                        '3 to 5 Business Days Rotation',
+                        '5 Revisions'
+                    ],
+                    featured: true
+                },
+                {
+                    title: 'Web Content Professional Package',
+                    price: 799.99,
+                    originalPrice: 1599.98,
+                    features: [
+                        '10 Pages Professional Copywriting Service',
+                        'Creative & Well-Written by 2 Professional Copywriters',
+                        'Industry Specified Expert Copywriters',
+                        '300 Words Per Page',
+                        'Unlimited Revisions',
+                        '7 to 10 Business Days Rotation'
+                    ],
+                    featured: false
+                }
+            ],
+            'animated-logo': [
+                {
+                    title: '2D Standard Logo Animation',
+                    price: 155.99,
+                    originalPrice: 311.98,
+                    features: [
+                        '3 custom and Unique design',
+                        '2 Unique Animation styles',
+                        'Camera Angles Positioning',
+                        'Lighting/Composing',
+                        '3 Revisions',
+                        'Animation and Effects'
+                    ],
+                    featured: false
+                },
+                {
+                    title: '3D Standard Logo Animation',
+                    price: 245.99,
+                    originalPrice: 491.98,
+                    features: [
+                        '5 custom and Unique design',
+                        '5 Unique Animation styles',
+                        'Camera Angles Positioning',
+                        'Lighting/Composing',
+                        'unlimited Revisions',
+                        'Animation and VFX'
+                    ],
+                    featured: true
+                },
+                {
+                    title: '3D Advance Logo Animation',
+                    price: 299.99,
+                    originalPrice: 599.98,
+                    features: [
+                        'UNLIMITED custom and Unique design',
+                        'UNLIMITED Unique Animation styles',
+                        'Camera Angles Positioning',
+                        'Lighting/Composing',
+                        'unlimited Revisions',
+                        'Animation and VFX'
+                    ],
+                    featured: false
+                }
+            ]
+        };
+
+        // Load Pricing Cards
+        function loadPricingCards(category = 'web-design') {
+            const pricingGrid = document.getElementById('pricingGrid');
+            pricingGrid.innerHTML = '';
+            
+            const plans = pricingData[category] || [];
+            
+            plans.forEach((plan, index) => {
+                const pricingCard = document.createElement('div');
+                pricingCard.className = `pricing-card ${plan.featured ? 'featured' : ''}`;
+                pricingCard.setAttribute('data-aos', 'fade-up');
+                pricingCard.setAttribute('data-aos-delay', index * 100);
+                
+                pricingCard.innerHTML = `
+                    <div class="pricing-header">
+                        <h3>${plan.title}</h3>
+                        <div class="price">
+                            $${plan.price}
+                            <span>/month</span>
+                        </div>
+                        <div class="original-price">$${plan.originalPrice}</div>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            ${plan.features.map(feature => `<li><i class="fas fa-check"></i> ${feature}</li>`).join('')}
+                        </ul>
+                        <a href="#contact" class="btn btn-full">Get Started</a>
+                    </div>
+                `;
+                
+                pricingGrid.appendChild(pricingCard);
+            });
+        }
+
+        // Pricing Tab Functionality
+        const pricingTabs = document.querySelectorAll('.pricing-tabs .tab-btn');
+        pricingTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                pricingTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                loadPricingCards(tab.getAttribute('data-tab'));
+            });
+        });
+
+        // Initialize Portfolio and Pricing
+        loadPortfolioItems();
+        loadPricingCards();
+
+        // Form Submission to Google Sheets
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz-...'; // Replace with your Google Apps Script URL
+        
+        document.getElementById('heroForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const spinner = document.getElementById('formSpinner');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            // Show spinner
+            spinner.style.display = 'block';
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            // Collect form data
+            const formData = new FormData(form);
+            
+            // Send data to Google Sheets
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => {
+                    spinner.style.display = 'none';
+                    if (response.ok) {
+                        successMessage.style.display = 'block';
+                        form.reset();
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .catch(error => {
+                    spinner.style.display = 'none';
+                    errorMessage.style.display = 'block';
+                    console.error('Error!', error.message);
+                });
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const spinner = document.getElementById('contactSpinner');
+            const successMessage = document.getElementById('contactSuccessMessage');
+            const errorMessage = document.getElementById('contactErrorMessage');
+            
+            // Show spinner
+            spinner.style.display = 'block';
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            // Collect form data
+            const formData = new FormData(form);
+            
+            // Send data to Google Sheets
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => {
+                    spinner.style.display = 'none';
+                    if (response.ok) {
+                        successMessage.style.display = 'block';
+                        form.reset();
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .catch(error => {
+                    spinner.style.display = 'none';
+                    errorMessage.style.display = 'block';
+                    console.error('Error!', error.message);
+                });
+        });
+
+        // Testimonial Slider
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        const testimonials = [
+            {
+                text: "Eweb design agency transformed our online presence completely. Their team is professional, creative, and delivered beyond our expectations. Highly recommended!",
+                author: "Sarah Johnson",
+                position: "CEO, TechStart Inc.",
+                image: "https://picsum.photos/seed/person1/60/60.jpg"
+            },
+            {
+                text: "Working with Eweb design agency was a game-changer for our business. They understood our needs perfectly and delivered a solution that exceeded our goals.",
+                author: "Michael Chen",
+                position: "Marketing Director, Innovate Corp",
+                image: "https://picsum.photos/seed/person2/60/60.jpg"
+            },
+            {
+                text: "The team at Eweb design agency is exceptional. They took our vision and turned it into a stunning reality. Our new website has increased our conversions by 40%!",
+                author: "Emily Rodriguez",
+                position: "Founder, Fashion Forward",
+                image: "https://picsum.photos/seed/person3/60/60.jpg"
+            }
+        ];
+        
+        let currentTestimonial = 0;
+        
+        function updateTestimonial(index) {
+            const testimonial = document.querySelector('.testimonial');
+            testimonial.innerHTML = `
+                <p class="testimonial-text">"${testimonials[index].text}"</p>
+                <div class="testimonial-author">
+                    <img src="${testimonials[index].image}" alt="Client" class="author-image">
+                    <div class="author-info">
+                        <h4>${testimonials[index].author}</h4>
+                        <p>${testimonials[index].position}</p>
+                    </div>
+                </div>
+            `;
+            
+            testimonialDots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+        
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentTestimonial = index;
+                updateTestimonial(currentTestimonial);
+            });
+        });
+        
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            updateTestimonial(currentTestimonial);
+        }, 5000);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '15px 0';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
