@@ -1177,7 +1177,7 @@
             });
         });
         
-    document.addEventListener('DOMContentLoaded', function() {
+   document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const submitBtnText = document.getElementById('submitBtnText');
@@ -1189,7 +1189,7 @@
     const googleScriptURL = 'https://script.google.com/macros/s/AKfycbwKVHClnDCNPuwdDjt6xZD9EtV31nCcla9gIZzzdAfV10QOM4aTDZrFuzZdukUTEc4L/exec';
     
     // Test the connection on page load
-    fetch(googleScriptURL + '?test=true', {
+    fetch(googleScriptURL, {
         method: 'GET'
     })
     .then(response => response.json())
@@ -1210,81 +1210,53 @@
         submitBtnSpinner.classList.remove('hidden');
         formMessage.classList.add('hidden');
         
-        // Get form data as URL-encoded string
-        const formData = new URLSearchParams(new FormData(contactForm)).toString();
-        console.log('Form data being sent:', formData);
+        // Get form data
+        const formData = new FormData(contactForm);
+        console.log('Form data being sent:', new URLSearchParams(formData).toString());
         
-        // Send data to Google Sheets
-        fetch(googleScriptURL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: formData,
-            mode: 'cors' // Try with CORS first
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Response from server:', data);
+        // Create a hidden iframe for the form submission
+        const iframe = document.createElement('iframe');
+        iframe.style.display = 'none';
+        iframe.name = 'form-iframe';
+        document.body.appendChild(iframe);
+        
+        // Create a form in the iframe
+        const iframeForm = document.createElement('form');
+        iframeForm.method = 'POST';
+        iframeForm.action = googleScriptURL;
+        iframeForm.target = 'form-iframe';
+        
+        // Add form fields to the iframe form
+        for (const [key, value] of formData.entries()) {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = value;
+            iframeForm.appendChild(input);
+        }
+        
+        // Add the form to the document and submit it
+        document.body.appendChild(iframeForm);
+        iframeForm.submit();
+        
+        // Set up a timeout to handle the response
+        setTimeout(() => {
+            // Remove the iframe and form
+            document.body.removeChild(iframe);
+            document.body.removeChild(iframeForm);
             
             // Reset form
             contactForm.reset();
             
             // Show success message
-            showMessage(data.message || 'Form submitted successfully!', 'success');
-        })
-        .catch(error => {
-            console.error('Error submitting form:', error);
+            showMessage('Form submitted successfully!', 'success');
             
-            // Try with no-cors mode as a fallback
-            fetch(googleScriptURL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: formData,
-                mode: 'no-cors'
-            })
-            .then(() => {
-                // With no-cors mode, we can't read the response
-                console.log('Form submitted with no-cors mode');
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Show success message
-                showMessage('Form submitted successfully!', 'success');
-            })
-            .catch(noCorsError => {
-                // Show error message
-                showMessage('An error occurred. Please try again.', 'error');
-                console.error('Error with no-cors mode:', noCorsError);
-            })
-            .finally(() => {
-                // Reset button state
-                submitBtn.disabled = false;
-                submitBtnText.textContent = 'Send Message';
-                submitBtnIcon.classList.remove('hidden');
-                submitBtnSpinner.classList.add('hidden');
-            });
-            
-            // Don't reset button state here, it will be done in the finally block above
-            return;
-        })
-        .finally(() => {
-            // Reset button state for the CORS request
-            if (submitBtn.disabled) {
-                submitBtn.disabled = false;
-                submitBtnText.textContent = 'Send Message';
-                submitBtnIcon.classList.remove('hidden');
-                submitBtnSpinner.classList.add('hidden');
-            }
-        });
+            // Reset button state
+            submitBtn.disabled = false;
+            submitBtnText.textContent = 'Send Message';
+            submitBtnIcon.classList.remove('hidden');
+            submitBtnSpinner.classList.add('hidden');
+        }, 2000); // Give it 2 seconds to process
     });
     
     function showMessage(message, type) {
