@@ -1177,7 +1177,7 @@
             });
         });
         
-     document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const submitBtnText = document.getElementById('submitBtnText');
@@ -1187,6 +1187,18 @@
     
     // Use the actual Google Script URL from your deployment
     const googleScriptURL = 'https://script.google.com/macros/s/AKfycbwKVHClnDCNPuwdDjt6xZD9EtV31nCcla9gIZzzdAfV10QOM4aTDZrFuzZdukUTEc4L/exec';
+    
+    // Test the connection on page load
+    fetch(googleScriptURL + '?test=true', {
+        method: 'GET'
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Script connection test:', data);
+    })
+    .catch(error => {
+        console.error('Script connection test failed:', error);
+    });
     
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -1198,40 +1210,80 @@
         submitBtnSpinner.classList.remove('hidden');
         formMessage.classList.add('hidden');
         
-        // Get form data
-        const formData = new FormData(contactForm);
+        // Get form data as URL-encoded string
+        const formData = new URLSearchParams(new FormData(contactForm)).toString();
+        console.log('Form data being sent:', formData);
         
-        // Create a URL-encoded string from the form data
-        const urlEncodedData = new URLSearchParams(formData).toString();
-        
-        // Send data to Google Sheets using a different approach for CORS
+        // Send data to Google Sheets
         fetch(googleScriptURL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: urlEncodedData,
-            mode: 'no-cors' // Using no-cors mode
+            body: formData,
+            mode: 'cors' // Try with CORS first
         })
-        .then(() => {
-            // With no-cors mode, we can't read the response, so we'll just assume success
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Response from server:', data);
+            
             // Reset form
             contactForm.reset();
             
             // Show success message
-            showMessage('Form submitted successfully!', 'success');
+            showMessage(data.message || 'Form submitted successfully!', 'success');
         })
         .catch(error => {
-            // Show error message
-            showMessage('An error occurred. Please try again.', 'error');
-            console.error('Error:', error);
+            console.error('Error submitting form:', error);
+            
+            // Try with no-cors mode as a fallback
+            fetch(googleScriptURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: formData,
+                mode: 'no-cors'
+            })
+            .then(() => {
+                // With no-cors mode, we can't read the response
+                console.log('Form submitted with no-cors mode');
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Show success message
+                showMessage('Form submitted successfully!', 'success');
+            })
+            .catch(noCorsError => {
+                // Show error message
+                showMessage('An error occurred. Please try again.', 'error');
+                console.error('Error with no-cors mode:', noCorsError);
+            })
+            .finally(() => {
+                // Reset button state
+                submitBtn.disabled = false;
+                submitBtnText.textContent = 'Send Message';
+                submitBtnIcon.classList.remove('hidden');
+                submitBtnSpinner.classList.add('hidden');
+            });
+            
+            // Don't reset button state here, it will be done in the finally block above
+            return;
         })
         .finally(() => {
-            // Reset button state
-            submitBtn.disabled = false;
-            submitBtnText.textContent = 'Send Message';
-            submitBtnIcon.classList.remove('hidden');
-            submitBtnSpinner.classList.add('hidden');
+            // Reset button state for the CORS request
+            if (submitBtn.disabled) {
+                submitBtn.disabled = false;
+                submitBtnText.textContent = 'Send Message';
+                submitBtnIcon.classList.remove('hidden');
+                submitBtnSpinner.classList.add('hidden');
+            }
         });
     });
     
