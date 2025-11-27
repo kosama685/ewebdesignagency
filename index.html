@@ -1177,7 +1177,7 @@
             });
         });
         
-   document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const submitBtnText = document.getElementById('submitBtnText');
@@ -1185,20 +1185,9 @@
     const submitBtnSpinner = document.getElementById('submitBtnSpinner');
     const formMessage = document.getElementById('formMessage');
     
-    // Use the actual Google Script URL from your deployment
+    // Use a CORS proxy service
     const googleScriptURL = 'https://script.google.com/macros/s/AKfycbwKVHClnDCNPuwdDjt6xZD9EtV31nCcla9gIZzzdAfV10QOM4aTDZrFuzZdukUTEc4L/exec';
-    
-    // Test the connection on page load
-    fetch(googleScriptURL, {
-        method: 'GET'
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Script connection test:', data);
-    })
-    .catch(error => {
-        console.error('Script connection test failed:', error);
-    });
+    const proxyURL = 'https://cors-anywhere.herokuapp.com/';
     
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -1212,51 +1201,38 @@
         
         // Get form data
         const formData = new FormData(contactForm);
-        console.log('Form data being sent:', new URLSearchParams(formData).toString());
+        const urlEncodedData = new URLSearchParams(formData).toString();
         
-        // Create a hidden iframe for the form submission
-        const iframe = document.createElement('iframe');
-        iframe.style.display = 'none';
-        iframe.name = 'form-iframe';
-        document.body.appendChild(iframe);
-        
-        // Create a form in the iframe
-        const iframeForm = document.createElement('form');
-        iframeForm.method = 'POST';
-        iframeForm.action = googleScriptURL;
-        iframeForm.target = 'form-iframe';
-        
-        // Add form fields to the iframe form
-        for (const [key, value] of formData.entries()) {
-            const input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = key;
-            input.value = value;
-            iframeForm.appendChild(input);
-        }
-        
-        // Add the form to the document and submit it
-        document.body.appendChild(iframeForm);
-        iframeForm.submit();
-        
-        // Set up a timeout to handle the response
-        setTimeout(() => {
-            // Remove the iframe and form
-            document.body.removeChild(iframe);
-            document.body.removeChild(iframeForm);
+        // Send data through the proxy
+        fetch(proxyURL + googleScriptURL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: urlEncodedData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Response from server:', data);
             
             // Reset form
             contactForm.reset();
             
             // Show success message
-            showMessage('Form submitted successfully!', 'success');
-            
+            showMessage(data.message || 'Form submitted successfully!', 'success');
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
+            showMessage('An error occurred. Please try again.', 'error');
+        })
+        .finally(() => {
             // Reset button state
             submitBtn.disabled = false;
             submitBtnText.textContent = 'Send Message';
             submitBtnIcon.classList.remove('hidden');
             submitBtnSpinner.classList.add('hidden');
-        }, 2000); // Give it 2 seconds to process
+        });
     });
     
     function showMessage(message, type) {
@@ -1274,8 +1250,7 @@
             formMessage.classList.add('hidden');
         }, 5000);
     }
-});
-        
+});    
         // Newsletter Form
         const newsletterForm = document.getElementById('newsletter-form');
         
