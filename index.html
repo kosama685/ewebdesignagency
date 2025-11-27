@@ -1177,7 +1177,7 @@
             });
         });
         
-       document.addEventListener('DOMContentLoaded', function() {
+     document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const submitBtnText = document.getElementById('submitBtnText');
@@ -1201,18 +1201,25 @@
         // Get form data
         const formData = new FormData(contactForm);
         
-        // Send data to Google Sheets
+        // Create a URL-encoded string from the form data
+        const urlEncodedData = new URLSearchParams(formData).toString();
+        
+        // Send data to Google Sheets using a different approach for CORS
         fetch(googleScriptURL, {
             method: 'POST',
-            body: formData
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: urlEncodedData,
+            mode: 'no-cors' // Using no-cors mode
         })
-        .then(response => response.json())
-        .then(data => {
+        .then(() => {
+            // With no-cors mode, we can't read the response, so we'll just assume success
             // Reset form
             contactForm.reset();
             
             // Show success message
-            showMessage(data.message || 'Form submitted successfully!', 'success');
+            showMessage('Form submitted successfully!', 'success');
         })
         .catch(error => {
             // Show error message
